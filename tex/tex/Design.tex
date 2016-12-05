@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+
+%\usepackage{zenindex}
+
+% ------ variables to modify for each doc instance
+\newcommand{\theauthor}{Paul Landes}
+\newcommand{\revision}{1.0}
+\newcommand{\doctitle}{Software Architecture Design/Document}
+\newcommand{\doctype}{DOCTYPE}
+\newcommand{\thestatus}{DRAFT}
+\newcommand{\thecompany}{PaulCo}
+% ------
+
+%\ddinitindex
+\usepackage{zendesigndoc}
+\ddfontset
+
+\begin{document}
+
+\ddheader
+
+\tableofcontents
+%\listoffigures
+%\listofalgorithms
+\thispagestyle{empty}
+%\newpage
+
+\section{Summary}
+\label{sec:summery}
+
+Text Here.
+
+%\ddfigure{\textwidth}{client-server}{Client Server Interaction}
+
+%Index ref\ddidxc{category}{term}.
+
+%% At end of document
+%\ddprintindex
+
+\end{document}
