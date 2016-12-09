@@ -11,7 +11,7 @@ object MainApp extends App {
   private val logger = Logger(LoggerFactory.getLogger(this.getClass))
 
   def main = {
-    prinltn("hello world")
+    println("hello world")
   }
 
   main
