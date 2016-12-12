@@ -9,7 +9,7 @@
   :codox {:metadata {:doc/format :markdown}
           :project {:name "${project-name}"}
           :output-path "target/doc/codox"
-          :source-uri "https://github.com/${user}/${project-name}/blob/v{version}/{filepath}#L{line}"}
+          :source-uri "https://github.com/${user}/${project}/blob/v{version}/{filepath}#L{line}"}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :javac-options ["-Xlint:unchecked"]
