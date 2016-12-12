@@ -2,25 +2,20 @@
 
 ${project-description}
 
-#[[
-## Obtaining
-]]#
+
+#[[## Obtaining]]#
 
 In your `project.clj` file, add:
 
 [![Clojars Project](https://clojars.org/${sub-group}/${group}/latest-version.svg)](https://clojars.org/${sub-group}/${group}/)
 
 
-#[[
-## Documentation
-]]#
+#[[## Documentation]]#
 
 Additional [documentation](https://${user}.github.io/${project}/codox/index.html).
 
 
-#[[
-## License
-]]#
+#[[## License]]#
 
 Copyright © 2017 Paul Landes
 
