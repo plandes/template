@@ -2,15 +2,19 @@ ENSIME_CONF=	.ensime
 
 all:		init
 
-.PHONY:
+.PHONY:	init
 init:		$(ENSIME_CONF)
 
 $(ENSIME_CONF):
 	sbt ensimeConfig
 
-.PHONEY:
+.PHONY: run
 run:
 	sbt run
+
+.PHONY: compile
+compile:
+	sbt compile
 
 clean:
 	rm -rf .ensime* project target
