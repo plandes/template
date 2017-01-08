@@ -31,7 +31,7 @@
               :exclusions [org.slf4j/slf4j-log4j12
                            ch.qos.logback/logback-classic]
               :dependencies [[org.apache.logging.log4j/log4j-core "2.7"]
-                             [org.apache.logging.log4j/log4j-slf4j-impl "2.3"]
-                             [org.apache.logging.log4j/log4j-jcl "2.3"]
+                             [org.apache.logging.log4j/log4j-slf4j-impl "2.7"]
+                             [org.apache.logging.log4j/log4j-jcl "2.7"]
                              [com.zensols/clj-append "1.0.5"]]}}
   :main ${package}.core)
