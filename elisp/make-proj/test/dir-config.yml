@@ -1,0 +1,5 @@
+package:
+  generate:
+    - file-map:
+        source: source-file.el
+        destination: ${project-name}-test.el

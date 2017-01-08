@@ -1,0 +1,39 @@
+project:
+  name: Emacs Lisp Project
+  description: New Emacs Lisp projects
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  generate:
+    excludes:
+      - makefile$
+      - .travis.yml$
+      - LICENSE$
+  context:
+    project:
+      description: root directory, conveniently github repo name
+      example: foo-project
+      default: GIT-REPO-NAME
+    project-name:
+      description: the name of the main elisp main file
+      default: WRITE ME
+      example: foo-project
+    project-short-description:
+      description: the project description that is added to the README.md
+      default: WRITE ME
+      example: foo emacsen bars
+    project-description:
+      description: a short project descsripion that is added to the main source file
+      default: WRITE ME
+      example: My Cool Foo Project
+    project-author:
+      description: author name of the new package
+      example: Paul Landes
+    project-author-github-account:
+      description: author Github user login
+      example: plandes
+    source-keywords:
+      description: source file keywords
+      example: interactive foo
+      default: ADD KEYWORDS
