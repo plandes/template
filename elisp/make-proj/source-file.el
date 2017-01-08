@@ -1,6 +1,7 @@
+#set($dateYear= $dateTool.get('yyyy'))
 ;;; ${project-name}.el --- ${project-short-description}
 
-;; Copyright (C) 2017 ${project-author}
+;; Copyright (C) ${dateYear} ${project-author}
 
 ;; Version: 0.1
 ;; Author: ${project-author}
