@@ -1,4 +1,6 @@
-# ${project-description} [![MELPA badge][melpa-badge]][melpa-link] [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link] [![Travis CI Build Status][travis-badge]][travis-link]
+# ${project-description}
+
+[![MELPA badge][melpa-badge]][melpa-link] [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link] [![Travis CI Build Status][travis-badge]][travis-link]
 
   [melpa-link]: https://melpa.org/#/${project-name}
   [melpa-stable-link]: https://stable.melpa.org/#/${project-name}
