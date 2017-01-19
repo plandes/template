@@ -12,7 +12,7 @@ In your `project.clj` file, add:
 
 #[[## Documentation]]#
 
-Additional [documentation](https://${user}.github.io/${project}/codox/index.html).
+API [documentation](https://${user}.github.io/${project}/codox/index.html).
 
 
 #[[## License]]#

@@ -1,6 +1,6 @@
 (defproject ${sub-group}/${group} "0.1.0-SNAPSHOT"
   :description "${project-description}"
-  :url "https://github.com/${user}/${project-name}"
+  :url "https://github.com/${user}/${project}"
   :license {:name "Apache License version 2.0"
             :url "https://www.apache.org/licenses/LICENSE-2.0"
             :distribution :repo}
