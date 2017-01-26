@@ -1,5 +1,5 @@
 #set($package-dir = $package.replace(".", "/").replace("-", "_"))
-#set($dst-ver-dir = $group.replace("-", "_"))
+#set($dst-ver-dir = $artifact.replace("-", "_"))
 package:
   generate:
     - directory-map:

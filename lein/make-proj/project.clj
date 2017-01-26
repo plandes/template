@@ -16,8 +16,11 @@
   :jar-exclusions [#".gitignore"]
   :dependencies [[org.clojure/clojure "1.8.0"]
 
+                 ;; logging for core (if needed)
+                 [org.apache.logging.log4j/log4j-core "2.7"]
+
                  ;; command line
-                 [com.zensols.tools/actioncli "0.0.12"]]
+                 [com.zensols.tools/actioncli "0.0.13"]]
   :pom-plugins [[org.codehaus.mojo/appassembler-maven-plugin "1.6"
                  {:configuration ([:programs
                                    [:program
@@ -29,9 +32,10 @@
              :dev
              {:jvm-opts ["-Dlog4j.configurationFile=test-resources/log4j2.xml" "-Xms4g" "-Xmx12g" "-XX:+UseConcMarkSweepGC"]
               :exclusions [org.slf4j/slf4j-log4j12
+                           log4j/log4j
                            ch.qos.logback/logback-classic]
-              :dependencies [[org.apache.logging.log4j/log4j-core "2.7"]
-                             [org.apache.logging.log4j/log4j-slf4j-impl "2.7"]
+              :dependencies [[org.apache.logging.log4j/log4j-slf4j-impl "2.7"]
+                             [org.apache.logging.log4j/log4j-1.2-api "2.7"]
                              [org.apache.logging.log4j/log4j-jcl "2.7"]
                              [com.zensols/clj-append "1.0.5"]]}}
   :main ${package}.core)
