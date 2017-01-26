@@ -1,15 +1,15 @@
 (ns ${package}.core
   (:require [zensols.actioncli.parse :as cli]
             [zensols.actioncli.log4j2 :as lu])
-  (:require [${group}.version])
+  (:require [${artifact}.version])
   (:gen-class :main true))
 
 (def ^:private version-info-command
   {:description "Get the version of the application."
    :options [["-g" "--gitref"]]
    :app (fn [{refp :gitref} & args]
-          (println ${group}.version/version)
-          (if refp (println ${group}.version/gitref)))})
+          (println ${artifact}.version/version)
+          (if refp (println ${artifact}.version/gitref)))})
 
 (defn- create-command-context []
   {:command-defs '((:repl zensols.actioncli repl repl-command)

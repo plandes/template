@@ -7,7 +7,7 @@ ${project-description}
 
 In your `project.clj` file, add:
 
-[![Clojars Project](https://clojars.org/${sub-group}/${group}/latest-version.svg)](https://clojars.org/${sub-group}/${group}/)
+[![Clojars Project](https://clojars.org/${group}/${artifact}/latest-version.svg)](https://clojars.org/${group}/${artifact}/)
 
 
 #[[## Documentation]]#
