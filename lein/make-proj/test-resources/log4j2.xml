@@ -12,7 +12,7 @@
     </appenders>
 
     <loggers>
-        <logger name="${package}" level="info"/>
+        <logger name="${package}" level="debug"/>
         <root level="warn">
             <appenderRef ref="console"/>
             <appenderRef ref="repl"/>

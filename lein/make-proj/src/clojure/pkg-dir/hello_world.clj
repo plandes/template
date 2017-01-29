@@ -1,8 +1,9 @@
 (ns ${package}.hello-world
-    (:require [zensols.actioncli.log4j2 :as lu]))
+  (:require [clojure.tools.logging :as log])
+  (:require [zensols.actioncli.log4j2 :as lu]))
 
 (defn- say-hello-world [text]
-  (println (format "%s: Hello World!" text)))
+  (log/infof "%s: Hello World!" text))
 
 (def hello-world-command
   "CLI command to invoke hello world"

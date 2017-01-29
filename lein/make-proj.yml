@@ -10,11 +10,11 @@ project:
       - makefile$
       - LICENSE$
   context:
-    sub-group:
+    group:
       description: maven group coordinate
       example: com.zensols.nlp
       default: com.zensols
-    group:
+    artifact:
       description: maven artifact coordinate
       example: parse
     package:
