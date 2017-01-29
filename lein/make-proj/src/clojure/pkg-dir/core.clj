@@ -17,6 +17,6 @@
    :single-commands {:version version-info-command}})
 
 (defn -main [& args]
-  ;;(lu/configure "log4j2.xml")
+  (lu/configure "${group}-log4j2.xml")
   (let [command-context (create-command-context)]
     (apply cli/process-arguments command-context args)))
