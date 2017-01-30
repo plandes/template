@@ -15,7 +15,7 @@ project:
       example: clj-nl-parse
       default: clj-
     project-name:
-      description: the project name
+      description: very short few word project description
       default: WRITE ME
       example: clj-nl-parse
     project-description:

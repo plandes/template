@@ -9,8 +9,8 @@
 
 (defn- create-action-context []
   (cli/multi-action-context
-   '((:repl zensols.actioncli repl repl-command)
-     (:hello ${package} hello-world hello-world-command))
+   '((:repl zensols.actioncli.repl repl-command)
+     (:hello ${package}.hello-world hello-world-command))
    :version-option (cli/version-option version-info)))
 
 (defn -main [& args]

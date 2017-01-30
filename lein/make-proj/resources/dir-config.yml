@@ -2,4 +2,4 @@ package:
   generate:
     - file-map:
         source: source-file.xml
-        destination: ${group}-log4j2.xml
+        destination: ${artifact}-log4j2.xml
