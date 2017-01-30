@@ -20,3 +20,7 @@ all:		info
 
 include $(ZBHOME)/src/mk/compile.mk
 #include $(ZBHOME)/src/mk/dist.mk
+#include $(ZBHOME)/src/mk/model.mk
+#include $(ZBHOME)/src/mk/dist.mk
+#include $(ZBHOME)/src/mk/release.mk
+#include $(ZBHOME)/src/mk/docker.mk

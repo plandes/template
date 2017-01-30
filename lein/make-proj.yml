@@ -10,6 +10,18 @@ project:
       - makefile$
       - LICENSE$
   context:
+    project:
+      description: github repo name
+      example: clj-nl-parse
+      default: clj-
+    project-name:
+      description: the project name
+      default: WRITE ME
+      example: clj-nl-parse
+    project-description:
+      description: a short project descsripion
+      default: WRITE ME
+      example: This library provides generalized library to deal with natural language.
     group:
       description: maven group coordinate
       example: com.zensols.nlp
@@ -21,21 +33,9 @@ project:
       description: root package space (creates <package>.core)
       default: zensols
       example: zensols.nlp
-    project:
-      description: github repo name
-      example: clj-nl-parse
-      default: clj-
     user:
       description: github user name
       example: plandes
     app-name:
       description: script name used with appassembler
       example: nlparser
-    project-name:
-      description: the project name
-      default: WRITE ME
-      example: clj-nl-parse
-    project-description:
-      description: a short project descsripion
-      default: WRITE ME
-      example: This library provides generalized library to deal with natural language.
