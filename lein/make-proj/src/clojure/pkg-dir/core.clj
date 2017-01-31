@@ -1,11 +1,11 @@
 (ns ${package}.core
   (:require [zensols.actioncli.log4j2 :as lu]
             [zensols.actioncli.parse :as cli])
-  (:require [${artifact}.version])
+  (:require [${package}.version :as ver])
   (:gen-class :main true))
 
 (defn- version-info []
-  (println (format "%s (%s)" ${artifact}.version/version ${artifact}.version/gitref)))
+  (println (format "%s (%s)" ver/version ver/gitref)))
 
 (defn- create-action-context []
   (cli/multi-action-context

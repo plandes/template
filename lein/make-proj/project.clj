@@ -1,3 +1,4 @@
+#set($package-dir = $package.replace(".", "/").replace("-", "_"))
 (defproject ${group}/${artifact} "0.1.0-SNAPSHOT"
   :description "${project-description}"
   :url "https://github.com/${user}/${project}"
@@ -5,11 +6,14 @@
             :url "https://www.apache.org/licenses/LICENSE-2.0"
             :distribution :repo}
   :plugins [[lein-codox "0.10.1"]
-            [org.clojars.cvillecsteele/lein-git-version "1.0.3"]]
+            [org.clojars.cvillecsteele/lein-git-version "1.2.7"]]
   :codox {:metadata {:doc/format :markdown}
           :project {:name "${project-name}"}
           :output-path "target/doc/codox"
           :source-uri "https://github.com/${user}/${project}/blob/v{version}/{filepath}#L{line}"}
+  :git-version {:root-ns "${package}"
+                :path "src/clojure/${package-dir}"
+                :version-cmd "git describe --match v*.* --abbrev=4 --dirty=-dirty"}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :javac-options ["-Xlint:unchecked"]
