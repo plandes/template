@@ -8,7 +8,7 @@
 #DIST_PREFIX=	$(HOME)/Desktop
 
 # location of the http://github.com/plandes/clj-zenbuild cloned directory
-ZBHOME=		../clj-zenbuild
+ZBHOME ?=	../clj-zenbuild
 
 # where the stanford model files are located
 #ZMODEL=	$(HOME)/opt/nlp/model
