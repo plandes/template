@@ -20,7 +20,7 @@
   :jar-exclusions [#".gitignore"]
   :dependencies [[org.clojure/clojure "1.8.0"]
 
-                 ;; logging for core (if needed)
+                 ;; logging for core
                  [org.apache.logging.log4j/log4j-core "2.7"]
 
                  ;; command line
