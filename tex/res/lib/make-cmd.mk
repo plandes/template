@@ -37,6 +37,14 @@ OBJS_TO_DEL+=	$(TEX).aux $(TEX).log *~ $(TEX).dvi $(TEX).ps \
 			$(TEX).loa *.eps *.ps $(TEX).out *.bak \
 			$(GRAFFINDF) $(DISTDIR) $(DISTZIP)
 
+# compiles faster in Emacs avoiding fontification of verbose output
+QUIET ?=	> /dev/null
+
+# default position of Preview.app
+PREV_POS ?=	{1500, 0}
+PREV_SIZE ?=	{1400, 1600}
+
+
 %.eps:		$(SEQPATH)/%.sdx
 		$(SDEDITBIN) -t eps -o $(CURDIR)/$*.eps $(SEQPATH)/$*.sdx
 
@@ -54,12 +62,12 @@ $(GRAFFINDF):	$(GRAFFLES) $(DIAGRAMS)
 		done
 
 $(TEX).dvi:	$(TEX).tex $(GRAFFINDF) $(LATDEPS)
-		$(LAT) $(TEX).tex
-		@ [ -z "$(NO_SECOND_RUN)" ] && $(LAT) $(TEX).tex
+		$(LAT) $(TEX).tex $(QUIET)
+		@ [ -z "$(NO_SECOND_RUN)" ] && $(LAT) $(TEX).tex $(QUIET)
 
 .PHONY:
 force:
-		$(LAT) $(TEX).tex
+		$(LAT) $(TEX).tex $(QUIET)
 
 .PHONY:
 ps:		$(TEX).ps
@@ -71,7 +79,7 @@ $(TEX).ps:	$(TEX).dvi
 pdf:		$(TEX).pdf
 
 $(TEX).pdf:	$(TEX).dvi
-		$(TPATH) dvipdfm -p letter $(TEX).dvi
+		$(TPATH) dvipdfm -q -p letter $(TEX).dvi
 		@ if [ ! -z "$(FINAL_PDF_NAME)" ] ; then \
 			cp $(TEX).pdf $(FINAL_PDF_NAME) ; \
 		fi
@@ -105,6 +113,8 @@ show:		$(TEX).dvi
 .PHONY:
 showpdf:	$(TEX).pdf
 		open $(TEX).pdf
+		osascript -e 'tell application "System Events" to set position of first window of application process "Preview" to $(PREV_POS)'
+		osascript -e 'tell application "System Events" to set size of first window of application process "Preview" to $(PREV_SIZE)'
 		osascript -e 'tell application "Emacs" to activate'
 
 .PHONY:
