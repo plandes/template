@@ -1,3 +1,4 @@
+#set($dateYear= $dateTool.get('yyyy'))
 # ${project-name}
 
 ${project-description}
@@ -32,14 +33,21 @@ To build from source, do the folling:
 ```bash
 mkdir ../clj-zenbuild && wget -O - https://api.github.com/repos/plandes/clj-zenbuild/tarball | tar zxfv - -C ../clj-zenbuild --strip-components 1
 ```
+- Build the software: `make jar`
 - Build the distribution binaries: `make dist`
 
 Note that you can also build a single jar file with all the dependencies with: `make uber`
 
 
+#[[## Changelog]]#
+
+An extensive changelog is available [here](CHANGELOG.md).
+
+
+
 #[[## License]]#
 
-Copyright © 2017 Paul Landes
+Copyright © ${dateYear} Paul Landes
 
 Apache License version 2.0
 
