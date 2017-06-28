@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 #[[## [Unreleased]]]#
 
 #[[## [0.0.1]]]# - ${dateRel}
-### Added
+#[[## Added]]#
 - Initial version
 
 [Unreleased]: https://github.com/plandes/clj-nlp-parse/compare/v0.0.1...HEAD
