@@ -253,22 +253,16 @@ Let:
 \usepackage{amsthm}
 \newtheorem{dddef}{Definition}
 
-\usepackage{algorithmic}
-\usepackage{algorithm}
-\renewcommand{\algorithmiccomment}[1]{// #1} 
-\renewcommand{\listalgorithmname}{Algorithms}
+%% https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage[]{algorithm2e}
 
 \newenvironment{ddalgo}[2]%
 {%
-\begin{algorithm}[ht]
+\begin{algorithm}[H]
 \caption{#1}
-\label{#2}
-\begin{algorithmic}[5]
-\renewcommand{\algorithmicforall}{\textbf{for each}}
-\small
+\label{algo:#2}
 }%
 {%
-\end{algorithmic}
 \end{algorithm}
 }%
 
