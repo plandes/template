@@ -28,6 +28,9 @@ on writeCanvas(theGraffleFile, exportFolder, theCanvases)
 			save myDoc in exportFileName
 		end repeat
 	end tell
+	tell application "Finder"
+	        set visible of process "OmniGraffle Professional" to false
+	end tell
 end writeCanvas
 
 on run argv
