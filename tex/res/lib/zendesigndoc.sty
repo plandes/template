@@ -254,13 +254,14 @@ Let:
 \newtheorem{dddef}{Definition}
 
 %% https://en.wikibooks.org/wiki/LaTeX/Algorithms
-\usepackage[]{algorithm2e}
+\providecommand{\ddalgoconfig}{linesnumbered,lined,boxed,commentsnumbered}
+\usepackage[\ddalgoconfig]{algorithm2e}
 
-\newenvironment{ddalgo}[2]%
+\newenvironment{ddalgo}[3]%
 {%
-\begin{algorithm}[H]
-\caption{#1}
-\label{algo:#2}
+\begin{algorithm}[#1]
+\caption{#2}
+\label{algo:#3}
 }%
 {%
 \end{algorithm}
@@ -289,6 +290,7 @@ Let:
 \newcommand{\ddTabref}[1]{Table~\ref{tab:#1}}
 \newcommand{\ddlstref}[1]{Listing~\ref{lst:#1}}
 \newcommand{\ddlstpref}[1]{on page~\pageref{lst:#1}}
+\newcommand{\ddalgoref}[1]{algorithm~\ref{algo:#1}}
 
 %% -- Terms
 % everyone disagrees on this, so macro out for latest descender
