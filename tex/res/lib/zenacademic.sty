@@ -71,6 +71,7 @@
 % full URL cite
 \newcommand{\ddurlci}[2]{\href{#1}{#2}\footnote{\url{#1}}}
 
+
 % envs
 
 %% ex: \begin{ddacdefinition}{01234567890}
@@ -78,6 +79,26 @@
 \newenvironment{ddacdefinition}[1]
 {\begin{dddefinitiontype}{#1}{\bf}{0cm}{0.3in}}
 {\end{dddefinitiontype}}
+
+
+%% theorem, proofs
+\newtheorem{theorem}{Theorem}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newenvironment{ddtheorem}[1]%
+{\begin{theorem}
+\label{the:#1}}
+{\end{theorem}}
+
+\newenvironment{ddproof}[1]%
+{\begin{proof}
+\label{prf:#1}}
+{\end{proof}}
+
+\newcommand{\ddtheoremref}[1]{theorem~\ref{the:#1}}
+\newcommand{\ddTheoremref}[1]{Theorem~\ref{the:#1}}
+\newcommand{\ddProofref}[1]{Proof~\ref{prf:#1}}
+\newcommand{\ddproofref}[1]{proof~\ref{prf:#1}}
 
 
 %% study guide

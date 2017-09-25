@@ -13,10 +13,12 @@ TEX=		Design
 ## default position of Preview.app after PDF creation
 #PREV_POS ?=	{1100, 0}
 #PREV_SIZE ?=	{1100, 1600}
+#PREV_POS ?=	{650, 0}
+#PREV_SIZE ?=	{900, 900}
 
 ## uncomment to get latex feedback, otherwise compiles faster (Emacs
 ## fontification latency)
-#QUIET=
+QUIET=
 
 
 #all:		$(TEX).dvi
