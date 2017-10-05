@@ -8,10 +8,14 @@ PDFTOPSBIN=	$(HOME)/opt/lib/osx/xpdf-3.02/bin/pdftops
 
 ## everything else shouldn't need modifying
 # paths
+nullstr=
+space=		$(nullstr) $(nullstring)
+TIPATH +=	. $(TEXLIBDIR)/image $(TEXLIBDIR)/lib
+TIPATHSTR=	$(subst $(space),:,$(TIPATH))
+# trailing colon needed
+TPATH=		TEXINPUTS=$(TIPATHSTR):
+LAT ?=		$(TPATH) latex
 HTMLDIR=	$(TEX)
-TIPATH=		.:$(TEXLIBDIR)/image:$(TEXLIBDIR)/lib:
-TPATH=		TEXINPUTS=$(TIPATH)
-LAT=		$(TPATH) latex
 GRAFFLEPATH=	$(realpath ../graffle)
 DBPATH=		$(realpath ../db)
 SEQPATH=	$(realpath ../seq)
