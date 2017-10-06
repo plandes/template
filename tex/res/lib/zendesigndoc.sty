@@ -261,8 +261,13 @@ Let:
 \newenvironment{ddalgo}[3]%
 {%
 \begin{algorithm}[#1]
-\caption{#2}
-\label{algo:#3}
+\SetKwProg{Fn}{Function}{}{end}%
+\SetKwInput{Input}{Input}%
+\SetKwInput{Output}{Output}%
+\SetKw{False}{false}%
+\SetKw{True}{true}%
+\caption{#2}%
+\label{algo:#3}%
 }%
 {%
 \end{algorithm}
