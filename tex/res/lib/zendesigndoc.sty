@@ -258,6 +258,8 @@ Let:
 \providecommand{\ddalgoconfig}{linesnumbered,lined,boxed,commentsnumbered}
 \usepackage[\ddalgoconfig]{algorithm2e}
 
+\providecommand{\ddallabel}[1]{NOT DEFINED}
+
 \newenvironment{ddalgo}[3]%
 {%
 \begin{algorithm}[#1]
@@ -268,6 +270,7 @@ Let:
 \SetKw{True}{true}%
 \caption{#3}%
 \label{algo:#2}%
+\renewcommand{\ddallabel}[1]{\label{algoline:#2:##1}}%
 }%
 {%
 \end{algorithm}
@@ -299,6 +302,8 @@ Let:
 \newcommand{\ddalgoref}[1]{Algorithm~\ref{algo:#1}}
 \newcommand{\ddAlgoref}[1]{\ddalgoref{#1}}
 \newcommand{\ddseealgo}[1]{(see \ddalgoref{#1})}
+\newcommand{\ddalref}[2]{\ddalgoref{#1} line~\ref{algoline:#1:#2}}
+
 
 %% -- Terms
 % everyone disagrees on this, so macro out for latest descender
