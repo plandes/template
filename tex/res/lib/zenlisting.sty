@@ -73,3 +73,11 @@
   morestring=[b]',
   morestring=[b]"
 }
+
+\newcommand{\ddlistingfile}[4]{%
+\lstinputlisting[caption=#4,label=lst:#3,language=#2]{#1}}
+
+\newcommand{\ddlstref}[1]{Listing~\ref{lst:#1}}
+\newcommand{\ddlstpref}[1]{on page~\pageref{lst:#1}}
+\newcommand{\ddLstref}[1]{Listing~\ref{lst:#1}}
+\newcommand{\ddseelst}[1]{see \ddlstref{lst:#1}}
