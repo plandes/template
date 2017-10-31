@@ -1,0 +1,35 @@
+project:
+  name: Zensol Maven Project
+  description: Simple Maven project.
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  generate:
+    excludes:
+      - makefile$
+      - LICENSE$
+  context:
+    project:
+      description: github repo name
+      default: myproject
+    project-name:
+      description: very short few word project description (goes in pom name)
+      default: WRITE ME
+      example: My Project
+    project-description:
+      description: a short project descsripion
+      default: WRITE ME
+      example: This library provides generalized library to deal with natural language.
+    group:
+      description: maven group coordinate
+      default: com.zensols.tools
+    artifact:
+      description: maven artifact coordinate
+      example: myproject
+    initial-version:
+      description: initial version used in pom.xml and README.md
+      default: 0.0.1
+    user:
+      description: github user name
+      example: plandes

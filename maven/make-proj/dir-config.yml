@@ -1,0 +1,19 @@
+#set($package = $group + "." + $artifact)
+#set($package-dir = $package.replace(".", "/").replace("-", "_"))
+package:
+  generate:
+    - directory-map:
+        source: java-dir
+        destination: src/main/java/${package-dir}
+    - directory-map:
+        source: test-dir
+        destination: src/test/java/${package-dir}
+    - directory-map:
+        source: main-res
+        destination: src/main/resources
+    - directory-map:
+        source: test-res
+        destination: src/test/resources
+    - directory-map:
+        source: site
+        destination: src/site
