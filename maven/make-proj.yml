@@ -7,7 +7,6 @@ project:
     default: make-proj
   generate:
     excludes:
-      - makefile$
       - LICENSE$
   context:
     project:
@@ -33,3 +32,6 @@ project:
     user:
       description: github user name
       example: plandes
+    user-name:
+      description: User name
+      example: Paul Landes

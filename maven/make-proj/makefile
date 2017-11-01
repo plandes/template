@@ -14,6 +14,10 @@ test:
 package:
 	mvn -Plogging-deps package
 
+.PHONY:	install
+install:
+	mvn -Plogging-deps install
+
 .PHONY:	site
 site:
 	mvn -Plogging-deps site
@@ -33,4 +37,3 @@ dist:
 .PHONY:	clean
 clean:
 	mvn clean
-#	rm -fr target

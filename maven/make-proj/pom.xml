@@ -31,7 +31,7 @@
 
     <developers>
 	<developer>
-	    <name>${user.name}</name>
+	    <name>${user-name}</name>
             <url>http://github.com/${user}</url>
 	</developer>
     </developers>
