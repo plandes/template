@@ -1,8 +1,8 @@
-## makefile automates the build and deployment for lein projects
+#[[## makefile automates the build and deployment for lein projects]]#
 
 # edit these if you want
 #GUSER=		johndoe
-#APP_SCR_NAME=	${project.app.name}
+#APP_SCR_NAME=	${package}.core
 #PROJ=		
 #REMOTE=	origin
 #DIST_PREFIX=	$(HOME)/Desktop

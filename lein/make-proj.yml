@@ -7,7 +7,6 @@ project:
     default: make-proj
   generate:
     excludes:
-      - makefile$
       - LICENSE$
   context:
     project:
@@ -17,7 +16,7 @@ project:
     project-name:
       description: very short few word project description
       default: WRITE ME
-      example: clj-nl-parse
+      example: Stanford CoreNLP Wrapper
     project-description:
       description: a short project descsripion
       default: WRITE ME
