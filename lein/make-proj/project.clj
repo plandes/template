@@ -42,5 +42,7 @@
               :dependencies [[org.apache.logging.log4j/log4j-slf4j-impl "2.7"]
                              [org.apache.logging.log4j/log4j-1.2-api "2.7"]
                              [org.apache.logging.log4j/log4j-jcl "2.7"]
-                             [org.apache.logging.log4j/log4j-jul "2.7"]]}}
+                             [org.apache.logging.log4j/log4j-jul "2.7"]]}
+             :test {:jvm-opts ["-Dlog4j.configurationFile=test-resources/test-log4j2.xml"
+                               "-Xms4g" "-Xmx12g" "-XX:+UseConcMarkSweepGC"]}}
   :main ${package}.core)
