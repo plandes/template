@@ -89,6 +89,12 @@
 \label{the:#1}}
 {\end{theorem}}
 
+\newtheorem{lemma}{Lemma}
+\newenvironment{ddlemma}[1]%
+{\begin{lemma}
+\label{lem:#1}}
+{\end{lemma}}
+
 \newenvironment{ddproof}[1]%
 {\begin{proof}
 \label{prf:#1}}
@@ -96,8 +102,12 @@
 
 \newcommand{\ddtheoremref}[1]{Theorem~\ref{the:#1}}
 \newcommand{\ddTheoremref}[1]{\ddtheoremref{#1}}
+\newcommand{\ddlemmaref}[1]{Lemma~\ref{lem:#1}}
+\newcommand{\ddLemmaref}[1]{\ddlemmaref{#1}}
 \newcommand{\ddProofref}[1]{Proof~\ref{the:#1}}
 \newcommand{\ddproofref}[1]{proof~\ref{the:#1}}
+\newcommand{\ddeqref}[1]{equation~\ref{eq:#1}}
+\newcommand{\ddEqref}[1]{Equation~\ref{eq:#1}}
 
 
 %% study guide
