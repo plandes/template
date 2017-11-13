@@ -2,6 +2,7 @@
 
 # edit these if you want
 #GUSER=		johndoe
+#APP_NAME=	${artifact}
 #APP_SCR_NAME=	${package}.core
 #PROJ=		
 #REMOTE=	origin

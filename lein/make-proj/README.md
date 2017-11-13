@@ -10,6 +10,7 @@ In your `project.clj` file, add:
 
 [![Clojars Project](https://clojars.org/${group}/${artifact}/latest-version.svg)](https://clojars.org/${group}/${artifact}/)
 
+
 #[[### Binaries]]#
 
 The latest release binaries are
@@ -42,7 +43,6 @@ Note that you can also build a single jar file with all the dependencies with: `
 #[[## Changelog]]#
 
 An extensive changelog is available [here](CHANGELOG.md).
-
 
 
 #[[## License]]#
