@@ -6,11 +6,14 @@
             :url "https://www.apache.org/licenses/LICENSE-2.0"
             :distribution :repo}
   :plugins [[lein-codox "0.10.3"]
+            [lein-javadoc "0.3.0"]
             [org.clojars.cvillecsteele/lein-git-version "1.2.7"]]
   :codox {:metadata {:doc/format :markdown}
           :project {:name "${project-name}"}
           :output-path "target/doc/codox"
           :source-uri "https://github.com/${user}/${project}/blob/v{version}/{filepath}#L{line}"}
+  :javadoc-opts {:package-names ["${group}.${artifact}"]
+                 :output-dir "target/doc/apidocs"}
   :git-version {:root-ns "${package}"
                 :path "src/clojure/${package-dir}"
                 :version-cmd "git describe --match v*.* --abbrev=4 --dirty=-dirty"}
