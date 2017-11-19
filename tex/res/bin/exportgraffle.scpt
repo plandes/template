@@ -1,5 +1,5 @@
 on writeCanvas(theGraffleFile, exportFolder, theCanvases)
-	tell application "OmniGraffle Professional 5"
+	tell application "OmniGraffle"
 	     	-- this next call blocks, need to update omnigraffle?
 		open file theGraffleFile as POSIX file
 		activate
@@ -29,7 +29,7 @@ on writeCanvas(theGraffleFile, exportFolder, theCanvases)
 		end repeat
 	end tell
 	tell application "Finder"
-	        set visible of process "OmniGraffle Professional" to false
+	        set visible of process "OmniGraffle" to false
 	end tell
 end writeCanvas
 
