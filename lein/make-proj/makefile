@@ -10,6 +10,8 @@
 
 # location of the http://github.com/plandes/clj-zenbuild cloned directory
 ZBHOME ?=	../clj-zenbuild
+# type of project, currently one of: clojure, python
+PROJ_TYPE=	clojure
 
 # where the stanford model files are located
 #ZMODEL=	$(HOME)/opt/nlp/model
@@ -19,11 +21,11 @@ ZBHOME ?=	../clj-zenbuild
 
 all:		info
 
-include $(ZBHOME)/src/mk/compile.mk
-#include $(ZBHOME)/src/mk/model.mk
-#include $(ZBHOME)/src/mk/dist.mk
-#include $(ZBHOME)/src/mk/release.mk
-#include $(ZBHOME)/src/mk/docker.mk
+include $(ZBHOME)/src/mk/env.mk
+#[[#include $(ZBHOME)/src/mk/model.mk]]#
+#[[#include $(ZBHOME)/src/mk/dist.mk]]#
+#[[#include $(ZBHOME)/src/mk/release.mk]]#
+#[[#include $(ZBHOME)/src/mk/docker.mk]]#
 
 .PHONY: test
 test:
