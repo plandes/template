@@ -47,6 +47,7 @@
 {%
 \end{\framevar}}
 
+% \ddequation{label}{Equation Name In TOC}{Header Description}{Footer Content}
 \newenvironment{ddequation}[4]%
 {%
 \newcommand{\ddequationfoot}{\ddequations{#2}#4}%
@@ -62,6 +63,16 @@
 \end{equation}%
 \ddequationfoot%
 \end{\framevar}}
+
+% \ddsimpleequation{label}
+\newenvironment{ddsimpleequation}[1]%
+{\begin{equation}
+\label{eq:#1}
+\begin{gathered}
+}%
+{%
+\end{gathered}
+\end{equation}}
 
 
 %% -- cite
