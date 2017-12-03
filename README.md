@@ -39,7 +39,10 @@ Most of these are [mkproj] templates that macro compile out to a project.
 
 ## Usage
 
-The recommended process is:
+I'll provide an example via a use case with a Clojure project.  First you'll
+need to install the [dependencies].
+
+The recommended process is (see [script version]):
 
 1. Clone the template (this repo):
 ```bash
@@ -50,8 +53,7 @@ mkdir template && \
 2. Download the [mkproj] boilerplate project starter:
 ```bash
 mkdir mkproj && \
-  wget -O -
-  https://github.com/plandes/clj-mkproj/releases/download/v0.0.7/mkproj.tar.bz2 | \
+  wget -O - https://github.com/plandes/clj-mkproj/releases/download/v0.0.7/mkproj.tar.bz2 | \
   tar jxfv - -C mkproj --strip-components 1
 ```
 3. Get [zenbuild] system by cloning or:
@@ -74,13 +76,14 @@ vi mkproj.yml
 ```bash
 /bin/bash ./mkproj/bin/mkproj
 ```
-7. Optionally create an initial commit baseline for the project:
+7. Create an initial commit baseline for the project and create an uberjar:
 ```bash
-make -C someproj init
+make -C clj-someproj init uber
 ```
-8. Compile and test the project
+
+8. Run the executable jar from the command line:
 ```bash
-make -C someproj test
+java -jar clj-someproj/target/someproj-0.0.1-standalone.jar 
 ```
 
  
@@ -94,3 +97,5 @@ GNU Lesser General Public License, Version 2.0
 <!-- links -->
 [zenbuild]: https://github.com/plandes/zenbuild
 [mkproj]: https://github.com/plandes/clj-mkproj
+[dependencies]: https://github.com/plandes/zenbuild#building-and-dependencies
+[script version]: doc/example/fastclj.sh
