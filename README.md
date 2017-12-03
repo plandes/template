@@ -65,7 +65,8 @@ mkdir zenbuild && \
 ```bash
 /bin/bash ./mkproj/bin/mkproj config -s template/lein
 ```
-5. Make changes to the project parameters `mkproj.yml` file:
+5. Optionally make changes to the project parameters `mkproj.yml` file (for
+   any serious work you'll have to edit this file):
 ```bash
 vi mkproj.yml
 ```
@@ -75,11 +76,11 @@ vi mkproj.yml
 ```
 7. Optionally create an initial commit baseline for the project:
 ```bash
-make -C <project created from mkproj> init
+make -C someproj init
 ```
 8. Compile and test the project
 ```bash
-make -C <project created from mkproj> test
+make -C someproj test
 ```
 
  

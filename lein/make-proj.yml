@@ -12,29 +12,31 @@ project:
     project:
       description: github repo name
       example: clj-nl-parse
-      default: clj-
+      default: clj-someproj
     project-name:
       description: very short few word project description
       default: WRITE ME
-      example: Stanford CoreNLP Wrapper
+      example: Some useful project
     project-description:
       description: a short project descsripion
       default: WRITE ME
-      example: This library provides generalized library to deal with natural language.
+      example: This library provides generalized tooling library.
     group:
       description: maven group coordinate
       example: com.zensols.nlp
-      default: com.zensols
+      default: com.zensols.tools
     artifact:
       description: maven artifact coordinate
       example: parse
+      default: someproj
     package:
       description: root package space (creates <package>.core)
-      default: zensols
       example: zensols.nlp
+      default: zensols.tools
     user:
       description: github user name
       example: plandes
     app-name:
       description: script name used with appassembler
       example: nlparser
+      default: someproj
