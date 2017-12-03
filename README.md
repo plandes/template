@@ -7,6 +7,26 @@ Most of these are [make project](https://github.com/plandes/clj-mkproj)
 templates that macro compile out to a project.
 
 
+## Usage
+
+The recommended process is:
+
+1. Clone the template (this repo):
+   `mkdir template && wget -O - https://api.github.com/repos/plandes/template/tarball | tar zxfv - -C template --strip-components 1`
+2. Download the boilerplate project starter:
+   `mkdir mkproj && wget -O - https://github.com/plandes/clj-mkproj/releases/download/v0.0.7/mkproj.tar.bz2 | tar jxfv - -C mkproj --strip-components 1`
+3. Get build system by cloning or:
+   `mkdir zenbuild && wget -O - https://api.github.com/repos/plandes/zenbuild/tarball | tar zxfv - -C zenbuild --strip-components 1`
+4. Create (for example) a Clojure boilerplate project (choose from a directory
+   in `./template`):
+   `/bin/bash ./mkproj/bin/mkproj config -s template/lein`
+5. Make changes to the project parameters: `vi mkproj.yml`
+6. Build out the project from the template: `/bin/bash ./mkproj/bin/mkproj`
+7. Optionally create an initial commit baseline for the project:
+   `make -C <project created from mkproj> init`
+8. Compile and test the project `make -C <project created from mkproj> test`
+
+
 ## Templates
 
 * **[Lein project](https://github.com/plandes/template/tree/master/lein)**:
