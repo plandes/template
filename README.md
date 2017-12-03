@@ -3,28 +3,17 @@
 This repo contains many of my own project boilerplate code.  Some of it is
 documentation specific and others coding projects.
 
-Most of these are [make project](https://github.com/plandes/clj-mkproj)
-templates that macro compile out to a project.
+Most of these are [mkproj] templates that macro compile out to a project.
 
 
-## Usage
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+## Table of Contents
 
-The recommended process is:
+- [Templates](#templates)
+- [Usage](#usage)
+- [License](#license)
 
-1. Clone the template (this repo):
-   `mkdir template && wget -O - https://api.github.com/repos/plandes/template/tarball | tar zxfv - -C template --strip-components 1`
-2. Download the boilerplate project starter:
-   `mkdir mkproj && wget -O - https://github.com/plandes/clj-mkproj/releases/download/v0.0.7/mkproj.tar.bz2 | tar jxfv - -C mkproj --strip-components 1`
-3. Get build system by cloning or:
-   `mkdir zenbuild && wget -O - https://api.github.com/repos/plandes/zenbuild/tarball | tar zxfv - -C zenbuild --strip-components 1`
-4. Create (for example) a Clojure boilerplate project (choose from a directory
-   in `./template`):
-   `/bin/bash ./mkproj/bin/mkproj config -s template/lein`
-5. Make changes to the project parameters: `vi mkproj.yml`
-6. Build out the project from the template: `/bin/bash ./mkproj/bin/mkproj`
-7. Optionally create an initial commit baseline for the project:
-   `make -C <project created from mkproj> init`
-8. Compile and test the project `make -C <project created from mkproj> test`
+<!-- markdown-toc end -->
 
 
 ## Templates
@@ -46,9 +35,61 @@ The recommended process is:
   includes support for:
   * [Travis Continuous Integration](https://travis-ci.org)
   * [Cask Builds](https://cask.github.io)
-  
+
+
+## Usage
+
+The recommended process is:
+
+1. Clone the template (this repo):
+```bash
+mkdir template && \
+  wget -O - https://api.github.com/repos/plandes/template/tarball | \
+  tar zxfv - -C template --strip-components 1
+```
+2. Download the [mkproj] boilerplate project starter:
+```bash
+mkdir mkproj && \
+  wget -O -
+  https://github.com/plandes/clj-mkproj/releases/download/v0.0.7/mkproj.tar.bz2 | \
+  tar jxfv - -C mkproj --strip-components 1
+```
+3. Get [zenbuild] system by cloning or:
+```bash
+mkdir zenbuild && \
+  wget -O - https://api.github.com/repos/plandes/zenbuild/tarball | \
+  tar zxfv - -C zenbuild --strip-components 1
+```
+4. Create (for example) a Clojure boilerplate project or choose from a directory
+   in `./template` (note that not all are [mkproj] projects):
+```bash
+/bin/bash ./mkproj/bin/mkproj config -s template/lein
+```
+5. Make changes to the project parameters `mkproj.yml` file:
+```bash
+vi mkproj.yml
+```
+6. Build out the project from the template:
+```bash
+/bin/bash ./mkproj/bin/mkproj
+```
+7. Optionally create an initial commit baseline for the project:
+```bash
+make -C <project created from mkproj> init
+```
+8. Compile and test the project
+```bash
+make -C <project created from mkproj> test
+```
+
+ 
 
 ## License
 Copyright © 2016 - 2017 Paul Landes
 
 GNU Lesser General Public License, Version 2.0
+
+
+<!-- links -->
+[zenbuild]: https://github.com/plandes/zenbuild
+[mkproj]: https://github.com/plandes/clj-mkproj
