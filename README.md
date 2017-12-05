@@ -20,6 +20,8 @@ Most of these are [mkproj] templates that macro compile out to a project.
 
 * **[Lein project](https://github.com/plandes/template/tree/master/lein)**:
   boilerplate for [Leiningen](http://leiningen.org).
+* **[Maven project](https://github.com/plandes/template/tree/master/maven)**:
+  boilerplate for [Maven](https://maven.apache.org)
 * **[Scala project](https://github.com/plandes/template/tree/master/sbt)**:
   Boilerplate [simple built tool (SBT)](http://www.scala-sbt.org) project to
   build Scala projects with Ensime ane Emacs.
