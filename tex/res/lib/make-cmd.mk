@@ -85,7 +85,7 @@ pdf:		$(TEX).pdf
 $(TEX).pdf:	$(TEX).dvi
 		$(TPATH) dvipdfm -q -p letter $(TEX).dvi
 		@ if [ ! -z "$(FINAL_PDF_NAME)" ] ; then \
-			cp $(TEX).pdf $(FINAL_PDF_NAME) ; \
+			cp $(TEX).pdf "$(FINAL_PDF_NAME)" ; \
 		fi
 
 .PHONY:
