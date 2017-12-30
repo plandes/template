@@ -1,0 +1,36 @@
+project:
+  name: Zensol Python Project
+  description: Simple Clojure project designed to work with [Zensol Build](https://github.com/plandes/zenbuild).
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  generate:
+    excludes:
+      - LICENSE$
+  context:
+    project:
+      description: github repo name
+      example: nlparse
+      default: someproj
+    project-name:
+      description: very short few word project description
+      default: WRITE ME
+      example: A convenience based tool
+    project-description:
+      description: a short project descsripion
+      default: WRITE ME
+      example: This library provides generalized tooling library.
+    namespace:
+      description: package namespace
+      example: zensols.nlp
+      default: zensols.tools
+    user:
+      description: github user name
+      example: plandes
+    author-email:
+      description: author email
+      example: user@example.com
+    author-name:
+      description: author full name
+      example: Paul Landes

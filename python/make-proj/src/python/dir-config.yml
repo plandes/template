@@ -1,0 +1,6 @@
+#set($namespace-dir = $namespace.replace(".", "/"))
+package:
+  generate:
+    - directory-map:
+        source: ns-dir
+        destination: ${namespace-dir}
