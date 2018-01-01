@@ -30,7 +30,7 @@ project:
       example: plandes
     author-email:
       description: author email
-      example: user@example.com
+      example: landesatmailcdtnet
     author-name:
       description: author full name
       example: Paul Landes

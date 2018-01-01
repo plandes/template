@@ -1,4 +1,4 @@
-import configparser, logging
+import logging
 
 logger = logging.getLogger('${namespace}.hw')
 

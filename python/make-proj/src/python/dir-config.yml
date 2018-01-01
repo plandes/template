@@ -1,6 +1,11 @@
+#set($comps = $namespace.split("\."))
+#set($init-pkg = $comps[0])
 #set($namespace-dir = $namespace.replace(".", "/"))
 package:
   generate:
+    - directory-map:
+        source: init-dir
+        destination: ${init-pkg}
     - directory-map:
         source: ns-dir
         destination: ${namespace-dir}
