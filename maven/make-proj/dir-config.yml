@@ -1,4 +1,5 @@
-#set($package = $group + "." + $artifact)
+#set($artifactMunge = $artifact.replace("-", ""))
+#set($package = $group + "." + $artifactMunge)
 #set($package-dir = $package.replace(".", "/").replace("-", "_"))
 package:
   generate:

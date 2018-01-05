@@ -1,5 +1,5 @@
 #set($package = $group + "." + $artifact)
-#set($package-dir = $package.replace(".", "/").replace("-", "_"))
+#set($package = $package.replace("-", ""))
 package ${package};
 
 import org.apache.commons.logging.Log;
