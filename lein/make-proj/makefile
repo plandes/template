@@ -6,7 +6,7 @@ PROJ_TYPE=		clojure
 #PROJ_MODULES=		dist release model docker python
 
 # edit these if you want
-#GUSER=			johndoe
+#GITUSER=		johndoe
 #APP_NAME=		${artifact}
 #APP_SCR_NAME=		${package}.core
 #PROJ=		

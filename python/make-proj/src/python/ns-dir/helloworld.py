@@ -13,3 +13,6 @@ class HelloWorld(object):
     @property
     def message(self):
         return self._message
+
+    def print_message(self):
+        print('message: %s' % self.message)

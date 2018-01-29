@@ -1,1 +1,1 @@
-actioncli==0.0,1
+zensols.actioncli==0.1
