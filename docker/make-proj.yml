@@ -1,0 +1,34 @@
+project:
+  name: Docker Image File
+  description: Barebones template for docker compose usage and images
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  generate:
+    excludes:
+      - LICENSE$
+  context:
+    project:
+      description: github repo name
+      default: docker-someproj
+    image-name:
+      description: iamge name
+      default: someproj
+    project-name:
+      description: very short few word project description
+      default: WRITE ME
+      example: A convenience based tool
+    project-description:
+      description: a short project descsripion
+      default: WRITE ME
+      example: This library provides generalized tooling library.
+    user:
+      description: github user name
+      example: plandes
+    author-email:
+      description: author email
+      example: landesatmailcdtnet
+    author-name:
+      description: author full name
+      example: Paul Landes

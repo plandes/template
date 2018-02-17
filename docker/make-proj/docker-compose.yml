@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dserv-test:
+    container_name: ${image-name}
+    #image: '${user}/${image-name}'
+    image: 'debian:stretch'
+    command: /usr/bin/tail -f /dev/null
