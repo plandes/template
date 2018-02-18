@@ -13,4 +13,9 @@ setup(
     download_url = 'https://github.com/${user}/${project}/releases/download/v0.0.1/${namespace}-0.1-py3-none-any.whl',
     keywords = ['tooling'],
     classifiers = [],
+    entry_points={
+        'console_scripts': [
+            '${project}=${namespace}.cli:main'
+        ]
+    }
 )
