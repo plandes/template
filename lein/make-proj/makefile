@@ -20,8 +20,11 @@ PROJ_TYPE=		clojure
 # (example: clean the generated app assembly file)
 #ADD_CLEAN+=		$(ASBIN_DIR)
 
-# location of the http://github.com/plandes/clj-zenbuild cloned directory
-include $(if $(ZBHOME),$(ZBHOME),../zenbuild)/main.mk
+# make build dependencies
+_ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
+	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
+
+include ./zenbuild/main.mk
 
 .PHONY: test
 test:
