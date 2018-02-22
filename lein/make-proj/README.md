@@ -29,11 +29,7 @@ To build from source, do the folling:
 - Install [Leiningen](http://leiningen.org) (this is just a script)
 - Install [GNU make](https://www.gnu.org/software/make/)
 - Install [Git](https://git-scm.com)
-- Download the source: `git clone https://github.com/plandes/${project} && cd ${project}`
-- Download the make include files:
-```bash
-mkdir ../zenbuild && wget -O - https://api.github.com/repos/plandes/zenbuild/tarball | tar zxfv - -C ../zenbuild --strip-components 1
-```
+- Download the source: `git clone --recurse-submodules https://github.com/plandes/${project} && cd ${project}`
 - Build the software: `make jar`
 - Build the distribution binaries: `make dist`
 
