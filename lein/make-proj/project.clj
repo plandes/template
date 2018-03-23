@@ -7,7 +7,7 @@
             :distribution :repo}
   :plugins [[lein-codox "0.10.3"]
             [lein-javadoc "0.3.0"]
-            [org.clojars.cvillecsteele/lein-git-version "1.2.7"]]
+            [[me.arrdem/lein-git-version "2.0.3"]]]
   :codox {:metadata {:doc/format :markdown}
           :project {:name "${project-name}"}
           :output-path "target/doc/codox"
@@ -35,7 +35,8 @@
                                     ([:mainClass "${package}.core"]
                                      [:id "${app-name}"])]]
                                   [:environmentSetupFileName "setupenv"])}]]
-  :profiles {:uberjar {:aot [${package}.core]}
+  :profiles {:1.9 {:dependencies [[org.clojure/clojure "1.9.0-RC2"]]}
+             :uberjar {:aot [${package}.core]}
              :appassem {:aot :all}
              :snapshot {:git-version {:version-cmd "echo -snapshot"}}
              :dev
@@ -46,6 +47,5 @@
                              [org.apache.logging.log4j/log4j-1.2-api "2.7"]
                              [org.apache.logging.log4j/log4j-jcl "2.7"]
                              [org.apache.logging.log4j/log4j-jul "2.7"]]}
-             :test {:jvm-opts ["-Dlog4j.configurationFile=test-resources/test-log4j2.xml"
-                               "-Xms4g" "-Xmx12g" "-XX:+UseConcMarkSweepGC"]}}
+             :test {:jvm-opts ["-Dlog4j.configurationFile=test-resources/test-log4j2.xml"]}}
   :main ${package}.core)
