@@ -7,7 +7,7 @@
             :distribution :repo}
   :plugins [[lein-codox "0.10.3"]
             [lein-javadoc "0.3.0"]
-            [[me.arrdem/lein-git-version "2.0.3"]]]
+            [org.clojars.cvillecsteele/lein-git-version "1.2.7"]]
   :codox {:metadata {:doc/format :markdown}
           :project {:name "${project-name}"}
           :output-path "target/doc/codox"
