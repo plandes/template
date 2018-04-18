@@ -35,7 +35,7 @@
                                     ([:mainClass "${package}.core"]
                                      [:id "${app-name}"])]]
                                   [:environmentSetupFileName "setupenv"])}]]
-  :profiles {:1.9 {:dependencies [[org.clojure/clojure "1.9.0-RC2"]]}
+  :profiles {:1.9 {:dependencies [[org.clojure/clojure "1.9.0"]]}
              :uberjar {:aot [${package}.core]}
              :appassem {:aot :all}
              :snapshot {:git-version {:version-cmd "echo -snapshot"}}
