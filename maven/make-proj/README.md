@@ -8,7 +8,7 @@ ${project-description}
 
 In your `pom.xml` file add
 the
-[dependency XML element](https://plandes.github.io/${project}/dependency-info.html) below:
+[dependency XML element](https://${user}.github.io/${project}/dependency-info.html) below:
 ```xml
 <dependency>
     <groupId>${group}</groupId>
@@ -20,9 +20,9 @@ the
 
 #[[## Documentation]]#
 
-More [documentation](https://plandes.github.io/${project}/):
-* [Javadoc](https://plandes.github.io/${project}/apidocs/index.html)
-* [Dependencies](https://plandes.github.io/${project}/dependencies.html)
+More [documentation](https://${user}.github.io/${project}/):
+* [Javadoc](https://${user}.github.io/${project}/apidocs/index.html)
+* [Dependencies](https://${user}.github.io/${project}/dependencies.html)
 
 
 #[[## Building]]#
