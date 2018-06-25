@@ -14,7 +14,7 @@ In your `project.clj` file, add:
 #[[### Binaries]]#
 
 The latest release binaries are
-available [here](https://github.com/plandes/${project}/releases/latest).
+available [here](https://github.com/${user}/${project}/releases/latest).
 
 
 #[[## Documentation]]#
@@ -29,7 +29,7 @@ To build from source, do the folling:
 - Install [Leiningen](http://leiningen.org) (this is just a script)
 - Install [GNU make](https://www.gnu.org/software/make/)
 - Install [Git](https://git-scm.com)
-- Download the source: `git clone --recurse-submodules https://github.com/plandes/${project} && cd ${project}`
+- Download the source: `git clone --recurse-submodules https://github.com/${user}/${project} && cd ${project}`
 - Build the software: `make jar`
 - Build the distribution binaries: `make dist`
 
@@ -43,18 +43,22 @@ An extensive changelog is available [here](CHANGELOG.md).
 
 #[[## License]]#
 
-Copyright © ${dateYear} Paul Landes
+Copyright (c) ${dateYear} ${user-name}
 
-Apache License version 2.0
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

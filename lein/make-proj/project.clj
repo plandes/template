@@ -2,8 +2,8 @@
 (defproject ${group}/${artifact} "0.1.0-SNAPSHOT"
   :description "${project-description}"
   :url "https://github.com/${user}/${project}"
-  :license {:name "Apache License version 2.0"
-            :url "https://www.apache.org/licenses/LICENSE-2.0"
+  :license {:name "MIT"
+            :url "https://opensource.org/licenses/MIT"
             :distribution :repo}
   :plugins [[lein-codox "0.10.3"]
             [lein-javadoc "0.3.0"]
@@ -22,21 +22,20 @@
   :java-source-paths ["src/java"]
   :javac-options ["-Xlint:unchecked"]
   :jar-exclusions [#".gitignore"]
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
 
                  ;; logging for core
                  [org.apache.logging.log4j/log4j-core "2.7"]
 
                  ;; command line
-                 [com.zensols.tools/actioncli "0.0.26"]]
+                 [com.zensols.tools/actioncli "0.0.27"]]
   :pom-plugins [[org.codehaus.mojo/appassembler-maven-plugin "1.6"
                  {:configuration ([:programs
                                    [:program
                                     ([:mainClass "${package}.core"]
                                      [:id "${app-name}"])]]
                                   [:environmentSetupFileName "setupenv"])}]]
-  :profiles {:1.9 {:dependencies [[org.clojure/clojure "1.9.0"]]}
-             :uberjar {:aot [${package}.core]}
+  :profiles {:uberjar {:aot [${package}.core]}
              :appassem {:aot :all}
              :snapshot {:git-version {:version-cmd "echo -snapshot"}}
              :dev

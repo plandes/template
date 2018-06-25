@@ -5,9 +5,6 @@ project:
     description: root of source code tree to interpolate
     example: view/template/proj
     default: make-proj
-  generate:
-    excludes:
-      - LICENSE$
   context:
     project:
       description: github repo name
@@ -33,6 +30,9 @@ project:
       description: root package space (creates <package>.core)
       example: zensols.nlp
       default: zensols.tools
+    user-name:
+      description: full human name
+      example: Paul Landes
     user:
       description: github user name
       example: plandes
