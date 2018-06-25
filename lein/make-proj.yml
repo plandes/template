@@ -33,6 +33,9 @@ project:
     user-name:
       description: full human name
       example: Paul Landes
+    user-email:
+      description: author email
+      example: landes@mailc.net
     user:
       description: github user name
       example: plandes

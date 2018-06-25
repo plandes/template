@@ -5,9 +5,6 @@ project:
     description: root of source code tree to interpolate
     example: view/template/proj
     default: make-proj
-  generate:
-    excludes:
-      - LICENSE$
   context:
     project:
       description: github repo name
@@ -28,9 +25,9 @@ project:
     user:
       description: github user name
       example: plandes
-    author-email:
+    user-email:
       description: author email
       example: landes@mailc.net
-    author-name:
-      description: author full name
+    user-name:
+      description: full human name
       example: Paul Landes
