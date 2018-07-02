@@ -1,12 +1,17 @@
 #set($dateYear= $dateTool.get('yyyy'))
 # ${project-name}
 
+[![Travis CI Build Status][travis-badge]][travis-link]
+
 ${project-description}
 
 
 #[[## Obtaining]]#
 
-TBD
+The easist way to install the command line program is via the `pip` installer:
+```bash
+pip install ${namespace}
+```
 
 
 #[[## Changelog]]#
@@ -35,3 +40,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+<!-- links -->
+[travis-link]: https://travis-ci.org/${user}/${project}
+[travis-badge]: https://travis-ci.org/${user}/${project}.svg?branch=master

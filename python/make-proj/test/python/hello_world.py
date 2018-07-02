@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 import logging
-logging.basicConfig(level=logging.DEBUG)
-import unittest, sys
+import unittest
+import sys
 from ${namespace} import HelloWorld
+
+logging.basicConfig(level=logging.DEBUG)
 
 logger = logging.getLogger('${namespace}.test')
 
