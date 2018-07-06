@@ -21,7 +21,7 @@ project:
     namespace:
       description: package namespace
       example: zensols.nlp
-      default: zensols.tools
+      default: zensols.someproj
     user:
       description: github user name
       example: plandes
