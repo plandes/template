@@ -1,6 +1,16 @@
+#[[## makefile automates the build and deployment for lein projects]]#
+
+# type of project, currently one of: clojure, python
 PROJ_TYPE=		docker
+# make modules to add functionality to a build
+#PROJ_MODULES=		
+
 DOCKER_IMG_NAME=	${image-name}
 DOCKER_USER=		${user}
 DOCKER_BUILD_DEPS=	
 
-include $(if $(ZBHOME),$(ZBHOME),../../../zenbuild)/main.mk
+# make build dependencies
+_ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
+	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
+
+include ./zenbuild/main.mk

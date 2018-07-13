@@ -14,7 +14,7 @@
     <loggers>
         <logger name="${package}" level="debug"/>
         <root level="warn">
-            <appenderRef ref="console"/>
+            <!--appenderRef ref="console"/-->
             <appenderRef ref="repl"/>
         </root>
     </loggers>
