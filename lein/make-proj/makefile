@@ -3,7 +3,7 @@
 # type of project, currently one of: clojure, python
 PROJ_TYPE=		clojure
 # make modules to add functionality to a build
-#PROJ_MODULES=		dist release model docker python
+#PROJ_MODULES=		appassem release model docker python
 
 # edit these if you want
 #GITUSER=		johndoe
