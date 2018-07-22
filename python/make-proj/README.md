@@ -13,6 +13,8 @@ The easist way to install the command line program is via the `pip` installer:
 pip install ${namespace}
 ```
 
+Binaries are also available on [pypi].
+
 
 #[[## Changelog]]#
 
@@ -45,3 +47,4 @@ SOFTWARE.
 <!-- links -->
 [travis-link]: https://travis-ci.org/${user}/${project}
 [travis-badge]: https://travis-ci.org/${user}/${project}.svg?branch=master
+[pypi]: https://pypi.org/project/${namespace}/
