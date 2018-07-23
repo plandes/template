@@ -22,6 +22,9 @@ setup(
     download_url = 'https://github.com/${user}/${project}/releases/download/v0.0.1/${namespace}-0.0.1-py3-none-any.whl',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
+    install_requires=[
+        'zensols.actioncli>=0.6',
+    ],
     keywords = ['tooling'],
     classifiers = [],
     entry_points={
