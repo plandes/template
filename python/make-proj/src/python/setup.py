@@ -10,6 +10,8 @@ while nname != dname:
         break
 with open(path.join(dname, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+with open(path.join(path.dirname(__file__), 'requirements.txt'), encoding='utf-8') as f:
+    requires = [x.strip() for x in f.readlines()]
 
 setup(
     name = "${namespace}",
@@ -22,9 +24,7 @@ setup(
     download_url = 'https://github.com/${user}/${project}/releases/download/v0.0.1/${namespace}-0.0.1-py3-none-any.whl',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    install_requires=[
-        'zensols.actioncli>=0.6',
-    ],
+    install_requires = requires,
     keywords = ['tooling'],
     classifiers = [],
     entry_points={

@@ -13,7 +13,7 @@ request. Please, try to follow these guidelines when you do so.
 * Be clear, concise and precise in your description of the problem.
 * Open an issue with a descriptive title and a summary in grammatically correct,
   complete sentences.
-* Mention your `${project}` Clojar/maven dependency version and operating
+* Mention your `${project}` Python dependency version and operating
   system.
 * Include any relevant code to the issue summary.
 
