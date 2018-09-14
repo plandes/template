@@ -6,10 +6,6 @@ project:
     example: view/template/proj
     default: make-proj
   context:
-    project:
-      description: github repo name
-      example: nlparse
-      default: someproj
     project-name:
       description: very short few word project description
       default: WRITE ME
@@ -18,6 +14,14 @@ project:
       description: a short project descsripion
       default: WRITE ME
       example: This library provides generalized tooling library.
+    project:
+      description: github repo name
+      example: nlparse
+      default: someproj
+    appclass:
+      description: main application class
+      example: NLPParser
+      default: MainApplication
     namespace:
       description: package namespace
       example: zensols.nlp

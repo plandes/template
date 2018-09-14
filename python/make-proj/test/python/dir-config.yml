@@ -1,0 +1,5 @@
+package:
+  generate:
+    - file-map:
+        source: test.py
+        destination: test-${project}.py

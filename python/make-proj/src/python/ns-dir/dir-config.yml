@@ -1,0 +1,6 @@
+#set($fname = $appclass.toLowerCase())
+package:
+  generate:
+    - file-map:
+        source: app.py
+        destination: ${fname}.py
