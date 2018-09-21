@@ -16,8 +16,7 @@ project:
     project:
       description: short one word lower case descriptor
       example: lstmclass
-      default: myproj
-#      default: shared
+      default: someproj
     description:
       description: a short project description
       default: WRITE ME
