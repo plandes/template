@@ -7,11 +7,12 @@ project:
     default: make-proj
   generate:
     excludes:
-      - ^makefile$
-      - graffle/*
-      - vec/*
+      - make-proj/makefile$
+      - graffle/.+
+      - vec/.+
       - sty/shared.bib
-      - paper/sty/*
+      - paper/sty/.+
+      - \.gitignore$
   context:
     project:
       description: short one word lower case descriptor
