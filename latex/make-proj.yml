@@ -1,0 +1,53 @@
+project:
+  name: Zensol Latex
+  description: Latex  Report, Academic Paper, and Slides [Zensol Build](https://github.com/plandes/zenbuild).
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  generate:
+    excludes:
+      - ^makefile$
+      - graffle/*
+      - vec/*
+      - sty/shared.bib
+      - paper/sty/*
+  context:
+    project:
+      description: short one word lower case descriptor
+      example: lstmclass
+      default: myproj
+#      default: shared
+    description:
+      description: a short project description
+      default: WRITE ME
+      example: LSTM Text Classification
+    description-long:
+      description: full title of paper, slides, or report
+      default: WRITE ME
+      example: LSTM Techniques for the Text Classification Task
+    document-type:
+      description: document type, subheader added to the title in some formats
+      example: Conference Paper
+      default: WRITE ME
+    author-name:
+      description: full human name
+      example: Paul Landes
+    author-email:
+      description: author email
+      example: landes@mailc.net
+    organization-name:
+      description: organization name
+      example: University of Illinois at Chicago
+    organization-short-name:
+      description: short version of the organization name
+      example: UIC
+    organization-department:
+      description: short version of the organization name
+      example: Department of Computer Science
+    organization-address:
+      description: short version of the organization name
+      example: Chicago, IL 60607, USA
+    organization-logo:
+      description: logo (encapsulated post script (.eps)) file name found in the ./vec directory
+      example: uic.eps

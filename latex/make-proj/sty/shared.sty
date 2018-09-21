@@ -1,0 +1,43 @@
+#set($dateStr = $dateTool.get('MM/dd/yyyy'))
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{${project}}[${dateStr} ${description}]
+
+% ------ doc variables
+\newcommand{\theauthor}{${author-name}}
+\newcommand{\theauthoremail}{${author-email}}
+\newcommand{\theorganization}{${organization-name}}
+\newcommand{\theorganizationshort}{${organization-short-name}}
+\newcommand{\theorganizationaddress}{${organization-address}}
+\newcommand{\theorganizationdept}{${organization-department}}
+\newcommand{\theorganizationlogo}{${organization-logo}}
+
+% doc specific
+\newcommand{\doctitle}{${description}}
+\newcommand{\doclongtitle}{${description-long}}
+\newcommand{\doctype}{${document-type}}
+\newcommand{\zzdrightfooter}{\theorganization}
+% ------
+
+\usepackage{zensec}
+\usepackage{zenfig}
+\usepackage{zenacro}
+\usepackage{zenacademic}
+
+
+% terms
+\DeclareAcronym{nlp}{
+  short=NLP,
+  long=natural language processing
+}
+\newcommand{\nlp}{\ac{nlp}}
+
+
+% commands (used only as an example--can torch this)
+\providecommand{\svd}[3]{
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[height=1.8in]{lsa#2.eps}
+\end{center}
+\caption{Singular value decomposition: #3}
+\label{fig:lsa#2}
+\end{figure*}}

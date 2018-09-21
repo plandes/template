@@ -1,0 +1,8 @@
+package:
+  generate:
+    - file-map:
+        source: shared.sty
+        destination: ${project}.sty
+    - file-map:
+        source: shared.bib
+        destination: ${project}.bib

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\usepackage{${project}}
+\usepackage{zenmath}
+\usepackage{zenhref}
+\usepackage{zenreport}
+
+\zrreportinitacademic
+%\zrreportinitbold
+\zzaddbiblatexstyle{numeric}{${project}.bib}
+
+\begin{document}
+\zrreptitle
+
+#[[\zrsec{Introduction}]]#
+#[[]]#
+#[[Some introduction that might use Cohen's Kappa~\cite{cohenWeightedKappaNominal1968}.]]#
+#[[]]#
+#[[]]#
+#[[]]#
+#[[\zrsubsec{Complex Entity Matching Method}]]#
+#[[]]#
+#[[To better match entities in cases where the author uses several aliases one]]#
+#[[must use the writing style for this resolution.  One way we classify]]#
+#[[an author's writing style using \nlp\ methods are with LSA.]]#
+#[[]]#
+#[[This algorithm is outlined below:]]#
+#[[]]#
+#[[\begin{enumerate}]]#
+#[[\item Create a term frequency matrix.  In this step we count the number of]]#
+#[[  times each term appears in all documents using the rows as the terms and the]]#
+#[[  columns as the document.  For us a document is a message board entry, tweet,]]#
+#[[  a Facebook post, etc.  Call this matrix $X$.]]#
+#[[]]#
+#[[  See \zzfigref{lsa} for an example initial matrix.]]#
+#[[]]#
+#[[\zzfigure{1.7in}{lsa}{Initial Example Matrix.}]]#
+#[[]]#
+#[[\item Optionally weight each cell in $X$ with the TF/IDF frequency as an]]#
+#[[  optimization step.]]#
+#[[]]#
+#[[\svd{4in}{3}{sorted matrices}]]#
+#[[]]#
+#[[\item Perform SVD.  This is a special kind of eigendecomposition on $X$ by]]#
+#[[  separating such that:]]#
+#[[\[X = U \, \Sigma V\zztrans\]]]#
+#[[  where $X$ is our term frequency matrix, $U$ and $V$ are the singular vectors,]]#
+#[[  which are a set of orthogonal eigenvectors.]]#
+#[[  $\Sigma$ is a diagonal matrix composed of the eigenvalues of $U$ and $V$.]]#
+#[[  See \zzfigref{lsa2}.]]#
+#[[]]#
+#[[\svd{\textwidth}{2}{initial matrix}]]#
+#[[]]#
+#[[\item Sort vectors in $U$ and $V$ using the ordering of the descending {\it]]#
+#[[    eiganvalues} from $\Sigma$.  See \zzfigref{lsa3}.]]#
+#[[]]#
+#[[\item First, $k$ is set as the number of clusters a priori and represents the]]#
+#[[  number of authors we choose to cluster together.  Then create a new latent]]#
+#[[  word embedding vector set with:]]#
+#[[  \[\hat{X}_k = \sum_{i=1}^{k} U_{ik} \Sigma_{ii} V_{ki}\zztrans\]]]#
+#[[  using only the first $k$ rows/columns to {\it truncate} the original SVD]]#
+#[[  matrix.]]#
+#[[]]#
+#[[\svd{\textwidth}{4}{truncated matrix}]]#
+#[[]]#
+#[[\item Create matrix based on the cosine similarity:]]#
+#[[]]#
+#[[\[ \mathbf{S} = [S_{i,j}] \]]]#
+#[[where]]#
+#[[\[S_{i,j} = \textrm{sim}(\hat{X}_{k,i}, \hat{X}_{k,j})\]]]#
+#[[]]#
+#[[\item Run clustering on $S$ (k-means, k-centering, etc) on $\mathbf{S}$.]]#
+#[[\end{enumerate}]]#
+
+
+
+%\clearpage
+%\pagebreak
+\medskip
+\printbibliography
+
+\end{document}

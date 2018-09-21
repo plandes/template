@@ -1,0 +1,121 @@
+%\documentclass[11pt,pdf]{beamer}
+\documentclass[11pt,pdf,handout]{beamer}
+
+% configure logo size
+\newcommand{\zsaddlogosize}{0.5cm}
+
+% import
+\usepackage{${project}}
+\usepackage{zenslides}
+
+% single author name, organization, department, address, email
+\zssingletitledeffull
+% single author name, email
+%\zssingletitledef
+% dual author name, email, organization, department, address
+%\zstwotitledef{John Doe}{jdoe@example.com}
+% dual author name, email, organization
+%\zstwotitleinstdef{John Doe}{jdoe@example.com}{Institution}{Department}{1234 Address St. Chicago IL.}
+
+% add logo
+\zsaddlogo
+% theme configuration
+\zsmetropolistheme
+% inline style of bibliography
+% use authortitle with \footcite or numeric with \cite and \shortcite
+\zzaddbiblatexstyle{authortitle}{${project}.bib}
+
+#[[\AtBeginSection{%]]#
+#[[\begin{frame}]]#
+#[[  \tableofcontents[currentsection, subsectionstyle=show/show/hide]]]#
+#[[\end{frame}]]#
+#[[}]]#
+#[[]]#
+#[[\begin{document}]]#
+#[[\begin{frame}]]#
+#[[  \titlepage]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\zzsec{Introduction}]]#
+#[[]]#
+#[[\begin{frame}{Definition}]]#
+#[[  Some definition about Cohen's Kappa~\footcite{cohenWeightedKappaNominal1968}.]]#
+#[[  \pause]]#
+#[[  More text.]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}{Information Retrieval: LSA Step 1}]]#
+#[[  LSA method:]]#
+#[[]]#
+#[[  \vspace{0.3cm}]]#
+#[[  \begin{minipage}{0.46\textwidth}]]#
+#[[    \begin{itemize}]]#
+#[[    \item Create term frequencies.]]#
+#[[    \item Rows are the term.]]#
+#[[    \item Columns are the document (Facebook posts, tweets, etc).]]#
+#[[    \item Cells are the term counts.]]#
+#[[    \item Final matrix has each cell weighted by the TF/IDF]]#
+#[[      frequency.]]#
+#[[    \end{itemize}]]#
+#[[  \end{minipage}]]#
+#[[  \begin{minipage}{0.46\textwidth}]]#
+#[[  \zzfigure{1.7in}{lsa}{Initial Matrix}]]#
+#[[  \end{minipage}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}{Information Retrieval: LSA Step 2}]]#
+#[[  Use SVD: $X = U \, \Sigma V^t$.]]#
+#[[  \zzfigure{.8\paperwidth}{lsa2}{Singular Value Decomposition}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}{Information Retrieval: LSA Step 3}]]#
+#[[  Sort vectors in all respective descending {\it eigenvalues}.]]#
+#[[  \zzfigure{.8\paperwidth}{lsa3}{Singular Value Decomposition}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}{Information Retrieval: LSA Step 4}]]#
+#[[  \begin{itemize}]]#
+#[[  \item New latent word embedding is:]]#
+#[[    \[ \hat{X}_k = \sum_{i=1}^{k} U_{ik} \Sigma_{ii} V_{ki}^T \]]]#
+#[[]]#
+#[[  \item Use only the first $k$ rows/columns]]#
+#[[  \item This row reduction reduces dimensionality and produces higher quality]]#
+#[[    term embeddings.]]#
+#[[  \end{itemize}]]#
+#[[]]#
+#[[  \zzfigure{.8\paperwidth}{lsa4}{Singular Value Decomposition}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}{Information Retrieval: LSA Step 5}]]#
+#[[  \begin{enumerate}]]#
+#[[  \item Create similarity matrix: $\mathbf{S} = [S_{i,j}]$.]]#
+#[[  \item Compute cosine similarity: $S_{i,\;j} = \textrm{sim}(\hat{X}_{k,i}, \hat{X}_{k,j})$.]]#
+#[[  \item Train using K-nearest neighbor on $S$.]]#
+#[[  \item Use same decomposition on the terms provided for the search and find]]#
+#[[    the closest document (sentence/paragraph).]]#
+#[[  \end{enumerate}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}[plain,c]{Demo}]]#
+#[[\begin{center}]]#
+#[[  \Huge]]#
+#[[  Demo]]#
+#[[\end{center}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}{Conclusion}]]#
+#[[  \begin{itemize}]]#
+#[[    \item Some conclusion.]]#
+#[[  \end{itemize}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\begin{frame}[plain,c]{Thank You!}]]#
+#[[\begin{center}]]#
+#[[  \Huge]]#
+#[[  Questions?]]#
+#[[\end{center}]]#
+#[[\end{frame}]]#
+#[[]]#
+#[[\zsrefframe]]#
+#[[]]#
+#[[\end{document}]]#
