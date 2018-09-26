@@ -3,7 +3,7 @@
 # type of project
 PROJ_TYPE=	c
 # make modules to add functionality to a build
-#PROJ_MODULES=		git docker release model
+#PROJ_MODULES=		docker release model
 
 # project build
 CPROG=		${project}

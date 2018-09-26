@@ -3,7 +3,7 @@
 # type of project
 PROJ_TYPE=	python
 # make modules to add functionality to a build
-#PROJ_MODULES=		git docker release model
+#PROJ_MODULES=		docker release model
 
 # edit these if you want
 #GITUSER=	johndoe
