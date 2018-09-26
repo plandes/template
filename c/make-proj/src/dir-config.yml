@@ -1,0 +1,8 @@
+package:
+  generate:
+    - file-map:
+        source: csrc.c
+        destination: ${project}.c
+    - file-map:
+        source: csrc.h
+        destination: ${project}.h
