@@ -1,6 +1,9 @@
 #[[## makefile automates the build and deployment for python projects]]#
 
+# type of project
 PROJ_TYPE=	python
+# make modules to add functionality to a build
+#PROJ_MODULES=		git docker release model
 
 # edit these if you want
 #GITUSER=	johndoe

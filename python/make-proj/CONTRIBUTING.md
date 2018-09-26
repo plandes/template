@@ -1,11 +1,11 @@
-# Contributing
+#[[# Contributing]]#
 
 If you discover issues, have ideas for improvements or new features, please
 report them to the [issue tracker][1] of the repository or submit a pull
 request. Please, try to follow these guidelines when you do so.
 
 
-## Issue reporting
+#[[## Issue reporting]]#
 
 * Check that the issue has not already been reported.
 * Check that the issue has not already been fixed in the latest code
@@ -18,14 +18,14 @@ request. Please, try to follow these guidelines when you do so.
 * Include any relevant code to the issue summary.
 
 
-### Reporting bugs
+#[[### Reporting bugs]]#
 
 Adding information like the backtrace and the REPL messages to the bug report
 makes it easier to track down bugs. Some steps to reproduce a bug reliably
 would also make a huge difference.
 
 
-## Pull requests
+#[[## Pull requests]]#
 
 * Read [how to properly contribute to open source projects on Github][2].
 * Use a topic branch to easily amend a pull request later, if necessary.

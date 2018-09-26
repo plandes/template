@@ -1,6 +1,6 @@
 #[[## makefile automates the build and deployment for lein projects]]#
 
-# type of project, currently one of: clojure, python
+# type of project
 PROJ_TYPE=		clojure
 # make modules to add functionality to a build
 #PROJ_MODULES=		appassem release model docker python
