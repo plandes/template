@@ -1,0 +1,5 @@
+package:
+  generate:
+    - file-map:
+        source: project.conf
+        destination: ${project}.conf

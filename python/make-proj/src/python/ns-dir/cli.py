@@ -17,14 +17,15 @@ class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
                               'meth': 'print_message',
                               'opts': [msg_op, outdir_op]}]}],
                'config_option': {'name': 'config',
-                                 'expect': False,
+                                 'expect': True,
                                  'opt': ['-c', '--config', False,
                                          {'dest': 'config',
                                           'metavar': 'FILE',
                                           'help': 'configuration file'}]},
                'whine': 1}
         super(ConfAppCommandLine, self).__init__(
-            cnf, config_env_name='${project}rc', pkg_dist='${namespace}')
+            cnf, config_env_name='${project}rc', pkg_dist='${namespace}',
+            config_type=AppConfig)
 
 
 def main():

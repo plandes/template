@@ -1,14 +1,18 @@
 import logging
 
-logger = logging.getLogger('${namespace}.hw')
+logger = logging.getLogger('${namespace}.${appshortname}')
 
 
 class ${appclass}(object):
     """Invoke Hello World.
 
     """
-    def __init__(self, message='hello world', out_dir=None):
+
+    SECTION = '${appshortname}'
+
+    def __init__(self, config, message='hello world', out_dir=None):
         logger.debug('init: %s' % message)
+        self.config = config
         self._message = message
         self.out_dir = out_dir
 
@@ -18,3 +22,7 @@ class ${appclass}(object):
 
     def print_message(self):
         print('output: {} to {}'.format(self.message, self.out_dir))
+
+    def tmp(self):
+        path = self.config.get_option_path('file_path', self.SECTION)
+        logger.info(f'invoking with {path}')

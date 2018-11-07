@@ -1,3 +1,3 @@
-#set($fname = $appclass.toLowerCase())
-from ${namespace}.${fname} import *
+from ${namespace}.config import *
+from ${namespace}.${appshortname} import *
 from ${namespace}.cli import *

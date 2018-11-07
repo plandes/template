@@ -22,6 +22,10 @@ project:
       description: main application class
       example: NLPParser
       default: MainApplication
+    appshortname:
+      description: used for main app file name and config section
+      example: parser
+      default: app
     namespace:
       description: package namespace
       example: zensols.nlp
