@@ -33,6 +33,9 @@ project:
     author-name:
       description: full human name
       example: Paul Landes
+    author-phone:
+      description: author phone number
+      example: 312-123-1234
     author-email:
       description: author email
       example: landes@mailc.net
