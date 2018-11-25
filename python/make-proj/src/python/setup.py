@@ -6,7 +6,7 @@ from zensols.pybuild import SetupUtil
 SetupUtil(
     setup_path=Path(__file__).parent.absolute(),
     name="${namespace}",
-    package_names=['${packages}', '${namespace}'],
+    package_names=['${packages}', 'resources'],
     # package_data={'': ['*.html', '*.js', '*.css', '*.map', '*.svg']},
     description='${project-description}',
     user='${user}',
