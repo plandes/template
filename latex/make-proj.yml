@@ -49,8 +49,20 @@ project:
       description: short version of the organization name
       example: Department of Computer Science
     organization-address:
-      description: short version of the organization name
-      example: Chicago, IL 60607, USA
+      description: address of the organization
+      example: 1200 W Harrison St.
+    organization-city:
+      description: city of the organization
+      example: Chicago
+    organization-state:
+      description: state of the organization
+      example: IL
+    organization-zip:
+      description: zip of the organization
+      example: 60607
+    organization-country:
+      description: country of the organization
+      example: USA
     organization-logo:
       description: logo (encapsulated post script (.eps)) file name found in the ./vec directory
       example: uic.eps
