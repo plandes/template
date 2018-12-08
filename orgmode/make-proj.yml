@@ -1,0 +1,21 @@
+project:
+  name: Zensol Orgmode Project
+  description: Emacs Orgmode file with document export based on [Zensol Build](https://github.com/plandes/zenbuild).
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  context:
+    project:
+      description: name of the document and created directory
+      example: nlparse
+      default: someproj
+    user:
+      description: github user name
+      example: plandes
+    user-email:
+      description: author email
+      example: landes@mailc.net
+    user-name:
+      description: full human name
+      example: Paul Landes

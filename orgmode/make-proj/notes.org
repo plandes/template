@@ -1,0 +1,12 @@
+#+TITLE: ${project}
+#+OPTIONS: toc:3
+#+OPTIONS: H:2
+#+OPTIONS: num:3
+#+STARTUP: indent
+#+STARTUP: showall
+* A section header:
+See [[https://orgmode.org/manual/Export-settings.html][export settings]]
+- =H= number of decimals of the section (nil for none) before becoming itemized lists
+- =num= number of sections (nil for none) headlines at level =n= or above
+- =toc= the table of contents level (0 for none)
+- =STARTUP: indent= tells it to auto indent levels
