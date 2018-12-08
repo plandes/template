@@ -18,4 +18,7 @@ ADD_CLEAN_ALL +=	$(OM_DOC_DIR)
 _ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
 	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
 
+# uncomment to refresh for every default make
+#all:			clean show
+
 include ./zenbuild/main.mk
