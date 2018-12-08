@@ -1,8 +1,16 @@
 #set($author-latex-phone = $author-phone.replace("-", "--"))
 \documentclass{letter}
 
-% options are nologo, colorlogo, blackwhitelogo (defaults to color)
-\usepackage[nologo]{zenletter}
+%% options:
+% logo[=<filename>.eps]: add a logo (default large-bw); don't add the extension
+% logosize[=size]: the size of the logo, defaults to 1.5in
+% header: add a header at top and under the logo (if one defined)
+% signature[=<filename>.eps]: add a signature (no ext) default: signature.eps
+
+% personal
+\usepackage[signature]{zenletter}
+% business
+%\usepackage[logo,logosize=1in,header,signature]{zenletter}
 
 \zlinitpersonal{${author-name}}
 {${organization-address}}
@@ -31,7 +39,7 @@ Somecity, SS. 12345-1150}
 
 I certify that I, \fromname, am indeed, writing this letter.
 
-\closing{Sincerely,}
+\zlclosing{Sincerely,}
 
 \end{letter}
 \end{document}
