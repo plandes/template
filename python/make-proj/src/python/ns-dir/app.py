@@ -1,6 +1,6 @@
 import logging
 
-logger = logging.getLogger('${namespace}.${appshortname}')
+logger = logging.getLogger(__name__)
 
 
 class ${appclass}(object):
