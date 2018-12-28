@@ -7,7 +7,7 @@
 \newcommand{\theauthoremail}{${author-email}}
 \newcommand{\theorganization}{${organization-name}}
 \newcommand{\theorganizationshort}{${organization-short-name}}
-\newcommand{\theorganizationaddress}{${organization-city}, ${organization-state}. ${organization-zip}, ${organization-country}}
+\newcommand{\theorganizationaddress}{${organization-city}, ${organization-state}.\@ ${organization-zip}, ${organization-country}}
 \newcommand{\theorganizationdept}{${organization-department}}
 \newcommand{\theorganizationlogo}{${organization-logo}}
 
@@ -18,21 +18,38 @@
 \newcommand{\zzdrightfooter}{\theorganization}
 % ------
 
+%% fonts
+%% http://www.icl.utk.edu/~mgates3/docs/latex-fonts.pdf
+%\usepackage{bookman}
+%\usepackage{charter}
+%\usepackage{fourier}
+
 \usepackage{zensec}
-\usepackage{zenfig}
 \usepackage{zenacro}
+\usepackage{zenfig}
 \usepackage{zenacademic}
+% needed for unicode characters in bibliography if there are any
+%\usepackage[utf8]{inputenc}
 
 
-% terms
-\DeclareAcronym{nlp}{
-  short=NLP,
-  long=natural language processing
-}
-\newcommand{\nlp}{\ac{nlp}}
+%% terms
+% NLP specific
+\zzdefnamedacro{nlp}{NLP}{natural language processing}
+\zzdefnamedacro{lsa}{LSA}{latent semantic analysis}
+\zzdefexpandacro{tfidf}{TF/IDF}{term frequency/inverse document frequency}
+\zzdefexpandacro{pos}{POS}{part of speech}
+\zzdefacro{lemma}{canonical version of a token}
+\zzdefacroterm{corpora}
+\zzdefacroterm{corpus}
+\zzdefacroterm{annotations}
+\zzdefacro{anncorp}{annotated corpus}
 
 
-% commands (used only as an example--can torch this)
+%% refs
+\zzdefurlacro{lsacode}{LSA classification repo}{https://github.com/chrisjmccormick/LSA\_Classification}
+
+
+%% commands (used only as an example--can torch this)
 \providecommand{\svd}[3]{
 \begin{figure*}[h!]
 \begin{center}

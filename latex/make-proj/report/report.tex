@@ -7,14 +7,26 @@
 
 \zrreportinitacademic
 %\zrreportinitbold
-\zzaddbiblatexstyle{numeric}{${project}.bib}
+% options: alphabetic, authoryear (default), numeric-comp, alphabetic-verb, alphabetic-comp
+% https://www.overleaf.com/learn/latex/Biblatex_citation_styles
+\zzaddbiblatexstyle[numeric]{${project}.bib}
 
 \begin{document}
 \zrreptitle
+%\tableofcontents
+
+\begin{abstract}
+  Latent semantic analysis (LSA) is a technique in natural language processing,
+  in particular distributional semantics, of analyzing relationships between a
+  set of documents and the terms they contain by producing a set of concepts
+  related to the documents and terms.
+\end{abstract}
+
 
 #[[\zrsec{Introduction}]]#
 #[[]]#
 #[[Some introduction that might use Cohen's Kappa~\cite{cohenWeightedKappaNominal1968}.]]#
+#[[An example implementation is provided with the \lsacode.  The \lsacode\ is freely available.]]#
 #[[]]#
 #[[]]#
 #[[]]#
@@ -77,6 +89,10 @@
 %\clearpage
 %\pagebreak
 \medskip
-\printbibliography
+\printbibliography\
+
+%\printacronyms[include-classes=abbrev, name=Abbreviations]
+
+%\printacronyms[include-classes=def, name=Definitions]
 
 \end{document}
