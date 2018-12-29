@@ -13,7 +13,7 @@ BIB_FILE =	$(abspath ../sty/${project}.bib)
 #FINAL_PDF_NAME=	$(HOME)/Desktop/${pdf-file-name}.pdf
 
 # uncomment to skip a second compilation (for references)
-#SECOND_RUN=1
+SECOND_RUN=1
 
 # uncomment to quiet the compilation
 QUIET=
