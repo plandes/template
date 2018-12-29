@@ -3,7 +3,7 @@
 
 # type of project
 PROJ_TYPE=	tex
-# make modules to add functionality to a build
+# make modules to add functionality to a build; add tex-index for indexes
 PROJ_MODULES=	tex-biber
 
 # per make file vars
