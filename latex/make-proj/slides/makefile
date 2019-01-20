@@ -10,18 +10,13 @@ PROJ_MODULES=	tex-biber
 TEX=		slides
 TIPATH +=	$(abspath ../sty)
 BIB_FILE =	$(abspath ../sty/${project}.bib)
-#FINAL_PDF_NAME=	$(HOME)/Desktop/${pdf-file-name}_Slides.pdf
+FINAL_PDF_NAME=	$(HOME)/Desktop/${pdf-file-name}_Slides.pdf
 
-# uncomment to skip a second compilation (for references)
-#SECOND_RUN=1
+# Preview.app top x, y, width, height
+PREV_LOC ?=	0 0 1100 1500
 
 # uncomment to quiet the compilation
 QUIET=
-
-#PREV_POS ?=	{1100, 0}
-#PREV_SIZE ?=	{1100, 1600}
-#PREV_POS ?=	{650, 0}
-#PREV_SIZE ?=	{900, 900}
 
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \

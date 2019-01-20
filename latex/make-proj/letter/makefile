@@ -1,26 +1,18 @@
+#set($pdf-file-name = $description.replace(" ", "_"))
 # latex document creation make file
 
 # type of project
 PROJ_TYPE=	tex
-# make modules to add functionality to a build
-#PROJ_MODULES=	tex-biber
 
 # per make file vars
 TEX=		letter
-#TIPATH +=	$(abspath ../sty)
-#BIB_FILE =	$(abspath ../sty/someproj.bib)
-#FINAL_PDF_NAME=	$(HOME)/Desktop/WRITE_ME_Report.pdf
+FINAL_PDF_NAME=	$(HOME)/Desktop/${pdf-file-name}_Letter.pdf
 
-# uncomment to skip a second compilation (for references)
-#SECOND_RUN=1
+# Preview.app top x, y, width, height
+PREV_LOC ?=	0 0 1100 1500
 
 # uncomment to quiet the compilation
 QUIET=
-
-#PREV_POS ?=	{1100, 0}
-#PREV_SIZE ?=	{1100, 1600}
-#PREV_POS ?=	{650, 0}
-#PREV_SIZE ?=	{900, 900}
 
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
