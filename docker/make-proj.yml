@@ -5,13 +5,10 @@ project:
     description: root of source code tree to interpolate
     example: view/template/proj
     default: make-proj
-  generate:
-    excludes:
-      - LICENSE$
   context:
     project:
       description: github repo name
-      default: docker-someproj
+      default: someproj
     image-name:
       description: iamge name
       default: someproj
@@ -23,12 +20,12 @@ project:
       description: a short project descsripion
       default: WRITE ME
       example: This library provides generalized tooling library.
+    user-name:
+      description: full human name
+      example: Paul Landes
+    user-email:
+      description: author email
+      example: landes@mailc.net
     user:
       description: github user name
       example: plandes
-    author-email:
-      description: author email
-      example: landesatmailcdtnet
-    author-name:
-      description: author full name
-      example: Paul Landes
