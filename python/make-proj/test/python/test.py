@@ -8,7 +8,7 @@ logger = logging.getLogger('${namespace}.test')
 
 class Test${appclass}(unittest.TestCase):
     def setUp(self):
-        self.config = AppConfig('resources/${appshortname}.conf')
+        self.config = AppConfig('resources/${project}.conf')
 
     def test_somedata(self):
         app = ${appclass}(self.config)
