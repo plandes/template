@@ -2,7 +2,7 @@ import logging
 import importlib
 from ${namespace} import AppConfig
 
-logger = logging.getLogger('${namespace}.proto')
+logger = logging.getLogger(__name__)
 
 
 def create_config():
