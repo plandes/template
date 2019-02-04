@@ -1,5 +1,8 @@
 from zensols.actioncli import OneConfPerActionOptionsCliEnv
-from ${namespace} import ${appclass}
+from ${namespace} import (
+    ${appclass},
+    AppConfig,
+)
 
 
 class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
