@@ -10,7 +10,7 @@ ${project-description}
 
 The easist way to install the command line program is via the `pip` installer:
 ```bash
-pip install ${namespace}
+pip3 install ${namespace}
 ```
 
 Binaries are also available on [pypi].
