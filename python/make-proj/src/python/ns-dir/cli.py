@@ -18,6 +18,7 @@ class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
                  'executor': lambda params: ${appclass}(**params),
                  'actions': [{'name': 'doit',
                               'meth': 'print_message',
+                              'doc': 'action help explains how to do it',
                               'opts': [msg_op, outdir_op]}]}],
                'config_option': {'name': 'config',
                                  'expect': True,

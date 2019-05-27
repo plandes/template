@@ -2,6 +2,7 @@
 # ${project-name}
 
 [![Travis CI Build Status][travis-badge]][travis-link]
+[![PyPI][pypi-badge]][pypi-link]
 
 ${project-description}
 
@@ -48,3 +49,4 @@ SOFTWARE.
 [travis-link]: https://travis-ci.org/${user}/${project}
 [travis-badge]: https://travis-ci.org/${user}/${project}.svg?branch=master
 [pypi]: https://pypi.org/project/${namespace}/
+[pypi-link]: https://pypi.python.org/pypi/${namespace}
