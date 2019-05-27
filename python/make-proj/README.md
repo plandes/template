@@ -50,3 +50,4 @@ SOFTWARE.
 [travis-badge]: https://travis-ci.org/${user}/${project}.svg?branch=master
 [pypi]: https://pypi.org/project/${namespace}/
 [pypi-link]: https://pypi.python.org/pypi/${namespace}
+[pypi-badge]: https://img.shields.io/pypi/v/${namespace}.svg
