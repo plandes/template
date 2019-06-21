@@ -8,7 +8,7 @@
 ;; Maintainer: ${project-author}
 ;; Keywords: ${source-keywords}
 ;; URL: https://github.com/${project-author-github-account}/${project}
-;; Package-Requires: ((emacs "24.5"))
+;; Package-Requires: ((emacs "26"))
 
 ;; This file is not part of GNU Emacs.
 
