@@ -1,3 +1,4 @@
+#set($dateYear= $dateTool.get('yyyy'))
 # ${project-description}
 
 [![MELPA badge][melpa-badge]][melpa-link]
@@ -9,7 +10,7 @@ WRITE ME
 
 #[[## License]]#
 
-Copyright © 2017 Paul Landes
+Copyright (c) ${dateYear} ${project-author}
 
 GNU Lesser General Public License, Version 2.0
 
