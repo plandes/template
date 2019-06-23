@@ -1,5 +1,5 @@
 #set($dateYear= $dateTool.get('yyyy'))
-;;; ${project-name}.el --- ${project-short-description}
+;;; ${project-name}.el --- ${project-short-description}  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) ${dateYear} ${project-author}
 
