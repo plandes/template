@@ -14,10 +14,10 @@ project:
     project:
       description: root directory, conveniently github repo name
       example: foo-project
-      default: GIT-REPO-NAME
+      default: someproj
     project-name:
       description: the name of the main elisp main file
-      default: WRITE ME
+      default: someproj
       example: foo-project
     project-short-description:
       description: the project description that is added to the README.md
