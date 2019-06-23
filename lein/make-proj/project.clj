@@ -28,7 +28,7 @@
                  [org.apache.logging.log4j/log4j-core "2.7"]
 
                  ;; command line
-                 [com.zensols.tools/actioncli "0.0.28"]]
+                 [com.zensols.tools/actioncli "0.0.29"]]
   :pom-plugins [[org.codehaus.mojo/appassembler-maven-plugin "1.6"
                  {:configuration ([:programs
                                    [:program
