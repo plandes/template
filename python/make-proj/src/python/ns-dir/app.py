@@ -1,3 +1,8 @@
+"""
+${project-description}
+"""
+__author__ = 'Paul Landes'
+
 import logging
 
 logger = logging.getLogger(__name__)
