@@ -7,7 +7,6 @@ project:
     default: make-proj
   generate:
     excludes:
-      - makefile$
       - .travis.yml$
       - LICENSE$
   context:

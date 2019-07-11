@@ -1,4 +1,4 @@
-#[[## makefile automates the build and deployment for lein projects]]#
+#[[## makefile automates the build and deployment for docker projects]]#
 
 # type of project, currently one of: clojure, python
 PROJ_TYPE=		docker
