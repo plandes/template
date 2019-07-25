@@ -1,3 +1,9 @@
+"""Command line entrance point to the application.
+
+"""
+__author__ = '${user}'
+
+
 from zensols.actioncli import OneConfPerActionOptionsCliEnv
 from ${namespace} import (
     ${appclass},

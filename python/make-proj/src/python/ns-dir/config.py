@@ -1,5 +1,11 @@
+"""Application configuration class.
+
+"""
+__author__ = '${user}'
+
 from zensols.actioncli import ExtendedInterpolationConfig
 
 
 class AppConfig(ExtendedInterpolationConfig):
-    pass
+    def __init__(self, *args, **kwargs):
+        super(AppConfig, self).__init__(*args, default_expect=True, **kwargs)
