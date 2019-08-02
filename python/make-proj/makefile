@@ -4,6 +4,7 @@
 PROJ_TYPE=	python
 # make modules to add functionality to a build
 #PROJ_MODULES=	docker release model
+PROJ_ARGS =	-c resources/${project}.conf
 
 # edit these if you want
 #GITUSER=	johndoe
@@ -18,3 +19,7 @@ _ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
 	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
 
 include ./zenbuild/main.mk
+
+.PHONY:		testrun
+testrun:
+	make PYTHON_BIN_ARGS="doit -c resources/someproj.conf -m 'test message' -o dir_name" run

@@ -25,7 +25,7 @@ class ${appclass}(object):
         return self._message
 
     def print_message(self):
-        print('output: {self.message} to {self.out_dir}')
+        print(f'output: {self.message} to {self.out_dir}')
 
     def tmp(self):
         path = self.config.get_option_path('file_path', self.SECTION)
