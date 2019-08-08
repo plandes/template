@@ -7,7 +7,7 @@ PROJ_TYPE=		docker
 
 DOCKER_IMG_NAME=	${image-name}
 DOCKER_USER=		${user}
-DOCKER_BUILD_DEPS=	
+#DOCKER_UP_DEPS=		
 
 # make build dependencies
 _ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
