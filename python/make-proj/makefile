@@ -22,4 +22,4 @@ include ./zenbuild/main.mk
 
 .PHONY:		testrun
 testrun:
-	make PYTHON_BIN_ARGS="doit -c resources/someproj.conf -m 'test message' -o dir_name" run
+	make PYTHON_BIN_ARGS="doit -c resources/${project}.conf -m 'test message' -o dir_name" run
