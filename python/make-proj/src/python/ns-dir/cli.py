@@ -13,6 +13,10 @@ from ${namespace} import (
 
 class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
     def __init__(self):
+        dry_run_op = [None, '--dryrun', False,
+                      {'dest': 'dry_run',
+                       'action': 'store_true', 'default': False,
+                       'help': 'do not do anything, just act like it'}]
         msg_op = ['-m', '--message', True,  # require argument
                   {'dest': 'message', 'metavar': 'STRING',
                    'help': 'a message to print'}]
@@ -25,7 +29,7 @@ class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
                  'actions': [{'name': 'doit',
                               'meth': 'print_message',
                               'doc': 'action help explains how to do it',
-                              'opts': [msg_op, outdir_op]}]}],
+                              'opts': [dry_run_op, msg_op, outdir_op]}]}],
                'config_option': {'name': 'config',
                                  'expect': True,
                                  'opt': ['-c', '--config', False,
