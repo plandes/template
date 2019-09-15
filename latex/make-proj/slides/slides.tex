@@ -1,9 +1,7 @@
 \ifdefined\ispresentation%
   \documentclass[11pt,pdf]{beamer}
-  \newcommand{\zsnote}[1]{\marginnote{\pdfcomment[icon=note]{#1}}}
 \else
   \documentclass[11pt,pdf,handout]{beamer}
-  \newcommand{\zsnote}[1]{\note[item]{#1}}
 \fi
 
 % configure logo size
@@ -36,7 +34,7 @@
 % theme configuration
 \zsmetropolistheme
 % inline style of bibliography
-\zzaddbiblatexstyle{claimclassam.bib}
+\zzaddbiblatexstyle{${project}.bib}
 
 #[[\AtBeginSection{%]]#
 #[[\begin{frame}]]#

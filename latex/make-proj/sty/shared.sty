@@ -1,6 +1,9 @@
 #set($dateStr = $dateTool.get('MM/dd/yyyy'))
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{${project}}[${dateStr} ${description}]
+\RequirePackage{kvoptions}
+\DeclareBoolOption{usesidenotes}
+\ProcessKeyvalOptions*
 
 % ------ doc variables
 \newcommand{\theauthor}{${author-name}}
@@ -25,7 +28,13 @@
 %\usepackage{fourier}
 
 \usepackage{zensec}
-\usepackage{zenacro}
+\usepackage{zensec}
+\if${project}@usesidenotes
+  \usepackage[usesidenotes]{zenacro}
+\else
+  \usepackage{zenacro}
+  \usepackage{fullpage}
+\fi
 \usepackage{zenfig}
 \usepackage{zenacademic}
 % needed for unicode characters in bibliography if there are any

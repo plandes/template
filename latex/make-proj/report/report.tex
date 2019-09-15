@@ -1,17 +1,25 @@
 \documentclass[12pt]{article}
 
 \usepackage{${project}}
+%\usepackage[usesidenotes]{${project}}
 \usepackage{zenmath}
 \usepackage{zenreport}
 
-\zrreportinitacademic
-%\zrreportinitbold
+% academic
+\zrreportinitacademic%
+%\zrreportinitbold%
+
+% report style
+%\zrreportinit%
+%\zrrpage%
+%\zrrfontset%
+
 % options: alphabetic, authoryear (default), numeric-comp, alphabetic-verb, alphabetic-comp
 % https://www.overleaf.com/learn/latex/Biblatex_citation_styles
 \zzaddbiblatexstyle[numeric]{${project}.bib}
 
 \begin{document}
-\zrreptitle
+\zrreptitle%
 %\tableofcontents
 
 \begin{abstract}
