@@ -9,7 +9,7 @@ ${project-description}
 
 #[[## Obtaining]]#
 
-The easist way to install the command line program is via the `pip` installer:
+The easiest way to install the command line program is via the `pip` installer:
 ```bash
 pip3 install ${namespace}
 ```
