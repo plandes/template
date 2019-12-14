@@ -17,8 +17,8 @@ BIB_FILE =	$(abspath ../sty/${project}.bib)
 FINAL_NAME=	${pdf-file-name}_Paper
 # Preview.app top x, y, width, height
 PREV_LOC ?=	0 0 1100 1500
-# uncomment to quiet the compilation
-QUIET=
+# control verbosity
+# TEX_QUIET=0
 
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
