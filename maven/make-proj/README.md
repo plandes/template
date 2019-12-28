@@ -27,7 +27,7 @@ More [documentation](https://${user}.github.io/${project}/):
 
 #[[## Building]]#
 
-To build from source, do the folling:
+To build from source, do the following:
 
 - Install [Maven](https://maven.apache.org)
 - Install [GNU make](https://www.gnu.org/software/make/) (optional)
