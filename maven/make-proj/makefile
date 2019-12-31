@@ -14,6 +14,10 @@ test:
 package:
 	mvn -Plogging-deps package
 
+.PHONY:	fatjar
+fatjar:
+	mvn -Pfat-jar compile assembly:single
+
 .PHONY:	install
 install:
 	mvn -Plogging-deps install
@@ -37,3 +41,7 @@ dist:
 .PHONY:	clean
 clean:
 	mvn clean
+
+.PHONY:	deploy
+deploy:
+	mvn clean package deploy
