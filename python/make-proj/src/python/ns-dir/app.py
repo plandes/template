@@ -15,12 +15,12 @@ class ${appclass}(object):
     SECTION = '${appshortname}'
 
     def __init__(self, config, message='hello world', out_dir=None,
-                 dry_run_op=False):
+                 dry_run=False):
         logger.debug(f'init: {message}')
         self.config = config
         self._message = message
         self.out_dir = out_dir
-        self.dry_run_op = dry_run_op
+        self.dry_run = dry_run
 
     @property
     def message(self):
