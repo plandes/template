@@ -28,7 +28,7 @@
                  [org.apache.logging.log4j/log4j-core "2.7"]
 
                  ;; command line
-                 [com.zensols.tools/actioncli "0.0.30"]]
+                 [com.zensols.tools/actioncli "0.1.0"]]
   :pom-plugins [[org.codehaus.mojo/appassembler-maven-plugin "1.6"
                  {:configuration ([:programs
                                    [:program
@@ -45,6 +45,5 @@
               :dependencies [[org.apache.logging.log4j/log4j-slf4j-impl "2.7"]
                              [org.apache.logging.log4j/log4j-1.2-api "2.7"]
                              [org.apache.logging.log4j/log4j-jcl "2.7"]
-                             [org.apache.logging.log4j/log4j-jul "2.7"]]}
-             :test {:jvm-opts ["-Dlog4j.configurationFile=test-resources/test-log4j2.xml"]}}
+                             [org.apache.logging.log4j/log4j-jul "2.7"]]}}
   :main ${package}.core)
