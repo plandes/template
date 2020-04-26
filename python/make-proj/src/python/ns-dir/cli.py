@@ -4,7 +4,7 @@
 __author__ = '${user}'
 
 
-from zensols.actioncli import OneConfPerActionOptionsCliEnv
+from zensols.cli import OneConfPerActionOptionsCliEnv
 from ${namespace} import (
     ${appclass},
     AppConfig,

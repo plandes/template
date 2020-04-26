@@ -1,5 +1,5 @@
 import logging
-from zensols.actioncli import ClassImporter
+from zensols.config import ClassImporter
 from ${namespace} import AppConfig
 
 logger = logging.getLogger(__name__)
