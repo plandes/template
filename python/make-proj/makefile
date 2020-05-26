@@ -4,6 +4,7 @@
 PROJ_TYPE=	python
 # make modules to add functionality to a build
 #PROJ_MODULES=	docker release model
+PROJ_MODULES=	git python-doc
 PROJ_ARGS =	-c resources/${project}.conf
 
 # edit these if you want
