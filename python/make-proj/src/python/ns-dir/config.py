@@ -3,9 +3,13 @@
 """
 __author__ = '${user}'
 
-from zensols.config import ExtendedInterpolationConfig
+from zensols.config import ExtendedInterpolationEnvConfig
 
 
-class AppConfig(ExtendedInterpolationConfig):
+class AppConfig(ExtendedInterpolationEnvConfig):
     def __init__(self, *args, **kwargs):
-        super(AppConfig, self).__init__(*args, default_expect=True, **kwargs)
+        if 'config_file' not in kwargs:
+            kwargs['config_file'] = 'resources/${project}.conf'
+        if 'env' not in kwargs:
+            kwargs['env'] = {'app_root': '.'}
+        super().__init__(*args, default_expect=True, **kwargs)

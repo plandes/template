@@ -37,9 +37,9 @@ class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
                                           'metavar': 'FILE',
                                           'help': 'configuration file'}]},
                'whine': 1}
-        super(ConfAppCommandLine, self).__init__(
-            cnf, config_env_name='${project}rc', pkg_dist='${namespace}',
-            config_type=AppConfig)
+        super().__init__(cnf, config_env_name='${project}rc',
+                         pkg_dist='${namespace}',
+                         config_type=AppConfig, no_os_environ=True)
 
 
 def main():
