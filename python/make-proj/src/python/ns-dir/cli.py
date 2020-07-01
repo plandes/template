@@ -1,4 +1,4 @@
-"""Command line entrance point to the application.
+"""Command line entry point to the application.
 
 """
 __author__ = '${user}'

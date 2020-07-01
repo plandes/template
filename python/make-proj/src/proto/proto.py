@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 def instance(name, info=(), debug=()):
-    conf = AppConfig('resources/${project}.conf')
+    conf = AppConfig()
     for l in debug:
         logging.getLogger(f'${namespace}.{l}').setLevel(logging.DEBUG)
     for l in info:
