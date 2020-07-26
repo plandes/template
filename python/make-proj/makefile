@@ -23,4 +23,4 @@ include ./zenbuild/main.mk
 
 .PHONY:		testrun
 testrun:
-	make PYTHON_BIN_ARGS="doit $(PROJ_ARGS) -m 'test message' -o dir_name" run
+	make PYTHON_BIN_ARGS="doit $(PROJ_ARGS) -o some_directory" run
