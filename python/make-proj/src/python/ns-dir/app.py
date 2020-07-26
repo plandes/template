@@ -3,7 +3,7 @@
 """
 __author__ = '${user}'
 
-from dataclasses import dataclass, InitVar, field
+from dataclasses import dataclass, field
 from pathlib import Path
 import logging
 
