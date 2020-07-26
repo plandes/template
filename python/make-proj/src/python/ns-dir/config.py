@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class AppConfig(ExtendedInterpolationEnvConfig):
     def __init__(self, *args, **kwargs):
-        if 'config_file' not in kwargs:
+        if len(args) == 0 and 'config_file' not in kwargs:
             kwargs['config_file'] = 'resources/${project}.conf'
         if 'env' not in kwargs:
             kwargs['env'] = {}
