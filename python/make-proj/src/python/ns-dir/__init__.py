@@ -1,3 +1,3 @@
-from ${namespace}.config import *
-from ${namespace}.${appshortname} import *
-from ${namespace}.cli import *
+from .config import *
+from .${appshortname} import *
+from .cli import *
