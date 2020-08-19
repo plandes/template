@@ -1,11 +1,11 @@
 #[[## makefile automates the build and deployment for python projects]]#
 
 # type of project
-PROJ_TYPE=	python
+PROJ_TYPE=		python
 # make modules to add functionality to a build
-#PROJ_MODULES=	docker release model
-PROJ_MODULES=	git python-doc
-PROJ_ARGS =	-c resources/${project}.conf
+#PROJ_MODULES=		docker release model
+PROJ_MODULES=		git python-doc
+PYTHON_BIN_ARGS =	-c resources/${project}.conf
 
 # edit these if you want
 #GITUSER=	johndoe
@@ -23,4 +23,4 @@ include ./zenbuild/main.mk
 
 .PHONY:		testrun
 testrun:
-	make PYTHON_BIN_ARGS="doit $(PROJ_ARGS) -o some_directory" run
+		make PYTHON_BIN_ARGS="doit $(PYTHON_BIN_ARGS) -o some_directory" run
