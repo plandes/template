@@ -3,7 +3,6 @@
 """
 __author__ = '${user}'
 
-
 from zensols.cli import OneConfPerActionOptionsCliEnv
 from dataclasses import dataclass, field, InitVar
 from pathlib import Path
@@ -30,10 +29,12 @@ class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
     def __init__(self):
         dry_run_op = [None, '--dryrun', False,
                       {'dest': 'dry_run',
-                       'action': 'store_true', 'default': False,
+                       'action': 'store_true',
+                       'default': False,
                        'help': 'do not do anything, just act like it'}]
-        outdir_op = ['-o', '--outputdir', False, # does not require argument
-                     {'dest': 'out_dir', 'metavar': 'DIRECTORY',
+        outdir_op = ['-o', '--outputdir', False,  # does not require argument
+                     {'dest': 'out_dir',
+                      'metavar': 'DIRECTORY',
                       'help': 'the directory to output the website'}]
         cnf = {'executors':
                [{'name': 'exporter',
