@@ -44,6 +44,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.autodoc',
     'sphinx_autodoc_typehints',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
 
@@ -63,6 +64,16 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['api/${package}.rst']
+
+# map to other sphinx docs
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', None),
+    'zensols.util': ('https://plandes.github.io/util/', None),
+    'zensols.persist': ('https://plandes.github.io/util/', None),
+    'zensols.config': ('https://plandes.github.io/util/', None),
+    'zensols.cli': ('https://plandes.github.io/util/', None),
+    'zensols.multi': ('https://plandes.github.io/util/', None),
+}
 
 # The master toctree document.
 master_doc = 'top'
