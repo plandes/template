@@ -7,7 +7,7 @@ from zensols.cli import OneConfPerActionOptionsCliEnv
 from dataclasses import dataclass, field, InitVar
 from pathlib import Path
 from zensols.config import ImportConfigFactory
-from ${namespace} import ${appclass}, AppConfig
+from ${namespace} import AppConfig, ${appclass}
 
 
 @dataclass
@@ -37,7 +37,7 @@ class ConfAppCommandLine(OneConfPerActionOptionsCliEnv):
                       'metavar': 'DIRECTORY',
                       'help': 'the directory to output the website'}]
         cnf = {'executors':
-               [{'name': 'exporter',
+               [{'name': '${project}',
                  'executor': lambda params: Cli(**params),
                  'actions': [{'name': 'doit',
                               'meth': 'print_message',
