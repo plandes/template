@@ -1,5 +1,6 @@
 #set($dateYear= $dateTool.get('yyyy'))
-;;; ${project-name}.el --- ${project-short-description}  -*- lexical-binding: t; -*-
+#set($projDescription=$project-short-description.substring(0, 1).toUpperCase() + $project-short-description.substring(1))
+;;; ${project-name}.el --- ${projDescription}  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) ${dateYear} ${project-author}
 
@@ -8,7 +9,7 @@
 ;; Maintainer: ${project-author}
 ;; Keywords: ${source-keywords}
 ;; URL: https://github.com/${project-author-github-account}/${project}
-;; Package-Requires: ((emacs "26"))
+;; Package-Requires: ((emacs "26") (dash "2.17.0"))
 
 ;; This file is not part of GNU Emacs.
 

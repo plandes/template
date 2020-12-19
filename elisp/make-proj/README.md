@@ -3,7 +3,7 @@
 
 [![MELPA badge][melpa-badge]][melpa-link]
 [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link]
-[![Travis CI Build Status][travis-badge]][travis-link]
+[![Build Status][build-badge]][build-link]
 
 WRITE ME
 
@@ -20,5 +20,5 @@ GNU Lesser General Public License, Version 2.0
 [melpa-stable-link]: https://stable.melpa.org/#/${project-name}
 [melpa-badge]: https://melpa.org/packages/${project-name}-badge.svg
 [melpa-stable-badge]: https://stable.melpa.org/packages/${project-name}-badge.svg
-[travis-link]: https://travis-ci.org/plandes/${project-name}
-[travis-badge]: https://travis-ci.org/plandes/${project-name}.svg?branch=master
+[build-badge]: https://github.com/${project-author-github-account}/${project-name}/workflows/CI/badge.svg
+[build-link]: https://github.com/${project-author-github-account}/${project-name}/actions
