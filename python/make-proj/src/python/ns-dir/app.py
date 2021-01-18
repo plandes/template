@@ -4,8 +4,8 @@
 __author__ = '${user}'
 
 from dataclasses import dataclass, field
-from pathlib import Path
 import logging
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
