@@ -12,7 +12,7 @@ FINAL_PDF_NAME=	$(HOME)/Desktop/${pdf-file-name}_Letter.pdf
 PREV_LOC ?=	0 0 1100 1500
 
 # uncomment to quiet the compilation
-QUIET=
+# TEX_QUIET=0
 
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
