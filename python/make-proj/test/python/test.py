@@ -3,8 +3,9 @@ import unittest
 from zensols.config import ImportConfigFactory
 from ${namespace} import ${appclass}, AppConfig
 
-# logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+if 0:
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
 
 
 class Test${appclass}(unittest.TestCase):
