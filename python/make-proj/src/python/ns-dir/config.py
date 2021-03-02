@@ -4,22 +4,17 @@
 __author__ = '${user}'
 
 import logging
-from zensols.config import ExtendedInterpolationEnvConfig
+from zensols.config import ImportIniConfig, EnvironmentConfig
 
 logger = logging.getLogger(__name__)
 
 
-class AppConfig(ExtendedInterpolationEnvConfig):
+class AppConfig(ImportIniConfig):
     def __init__(self, *args, **kwargs):
         if len(args) == 0 and 'config_file' not in kwargs:
             kwargs['config_file'] = 'resources/${project}.conf'
-        if 'env' not in kwargs:
-            kwargs['env'] = {}
-        env = kwargs['env']
-        defs = {'app_root': '.'}
-        for k, v in defs.items():
-            if k not in env:
-                if logger.isEnabledFor(logging.INFO):
-                    logger.info(f'using default {k} = {v}')
-                env[k] = v
-        super().__init__(*args, default_expect=True, **kwargs)
+        env = EnvironmentConfig(map_delimiter='$')
+        super().__init__(*args, children=(env,),
+                         exclude_config_sections=False,
+                         config_section='default',
+                         **kwargs)

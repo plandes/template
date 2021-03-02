@@ -1,5 +1,0 @@
-package:
-  generate:
-    - file-map:
-        source: bin-file.py
-        destination: ${project}
