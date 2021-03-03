@@ -8,6 +8,7 @@ su = SetupUtil(
     name="${namespace}",
     package_names=['${packages}', 'resources'],
     # package_data={'': ['*.html', '*.js', '*.css', '*.map', '*.svg']},
+    package_data={'': ['*.conf', '*.json', '*.yml']},
     description='${project-description}',
     user='${user}',
     project='${project}',

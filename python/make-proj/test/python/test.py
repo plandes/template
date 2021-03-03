@@ -1,7 +1,8 @@
 import logging
 import unittest
-from zensols.config import ImportConfigFactory
-from ${namespace} import ${appclass}, AppConfig
+from pathlib import Path
+from ${namespace} import ${appclass}, FirstClassObj
+from instfac import InstanceFactory
 
 if 0:
     logging.basicConfig(level=logging.DEBUG)
@@ -10,10 +11,16 @@ if 0:
 
 class Test${appclass}(unittest.TestCase):
     def setUp(self):
-        self.config = AppConfig('resources/${project}.conf')
-        self.factory = ImportConfigFactory(self.config)
+        self.app: ${appclass} = InstanceFactory(
+            'doit --level=err'.split(), reload_factory=False).instance()
 
     def test_somedata(self):
-        ${appshortname}: ${appclass} = self.factory('${appshortname}')
-        path = ${appshortname}.path
-        self.assertEqual('target/${appshortname}.dat', str(path))
+        app = self.app
+        should = Path('to/some/file.dat')
+        res: int = app.doit(should)
+        self.assertEqual(${appclass}, type(app))
+        self.assertEqual(0, res)
+        self.assertTrue(isinstance(app.an_inst, FirstClassObj))
+        self.assertTrue(str(app.an_inst.path).startswith('target'))
+        self.assertEqual(should, app._out_dir)
+        self.assertEqual(False, app.dry_run)

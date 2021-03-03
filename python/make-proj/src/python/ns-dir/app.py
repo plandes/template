@@ -6,8 +6,15 @@ __author__ = '${user}'
 from dataclasses import dataclass, field
 import logging
 from pathlib import Path
+from zensols.config import Configurable
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class FirstClassObj(object):
+    path: Path = field()
+    """The path to some resource."""
 
 
 @dataclass
@@ -15,11 +22,28 @@ class ${appclass}(object):
     """${project-description}
 
     """
-    path: Path
-    out_dir: Path = field(default=None)
+    config: Configurable
+
+    an_inst: FirstClassObj = field()
+    """An instance not given on the commnd line."""
+
     dry_run: bool = field(default=False)
+    """If given, don't do anything, just act like it."""
+
+    def doit(self, out_dir: Path = None):
+        """Does something interesting.
+
+        :param out_dir: the directory to output the data
+
+        """
+        if logger.isEnabledFor(logging.INFO):
+            logger.info(f'path: out_dir: {out_dir}, dry_run: {self.dry_run}')
+            logger.info(f'instance: {self.an_inst}')
+        self.config.remove_section('some_inst')
+        logger.debug('some debug message')
+        self._out_dir = out_dir
+        return 0
 
     def tmp(self):
         if logger.isEnabledFor(logging.INFO):
-            logger.info(f'path: {self.path}, out_dir: {self.out_dir}, ' +
-                        f'dry_run: {self.dry_run}')
+            logger.info('do something more')

@@ -1,25 +1,23 @@
+"""Prototyping REPL fodder.
+
+"""
+__author__ = 'Paul Landes'
+
 import logging
-from zensols.config import ImportConfigFactory
-from ${namespace} import AppConfig
+from ${namespace} import ${appclass}
+from instfac import InstanceFactory
 
 logger = logging.getLogger(__name__)
 
 
-def create_factory():
-    conf = AppConfig()
-    return ImportConfigFactory(conf, reload=True)
-
-
 def tmp():
-    factory = create_factory()
-    ${appshortname} = factory('${appshortname}')
-    ${appshortname}.tmp()
+    fac = InstanceFactory('doit --level debug'.split())
+    ${appshortname}: ${appclass} = fac.instance()
+    ${appshortname}.doit()
 
 
 def main():
     print()
-    logging.basicConfig(level=logging.WARNING)
-    logging.getLogger('${namespace}').setLevel(logging.DEBUG)
     run = 1
     {1: tmp,
      }[run]()
