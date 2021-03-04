@@ -1,14 +1,13 @@
+#set ( $prog = $project.substring(0, 1).toUpperCase() + $project.substring(1) )
 """Command line entry point to the application.
 
 """
 __author__ = 'plandes'
 
 from typing import List, Any
-from zensols.config import DictionaryConfig
-from zensols.cli import ApplicationFactory
+from . import ${prog}ApplicationFactory
 
 
 def main(args: List[str] = None) -> Any:
-    conf = DictionaryConfig({'appenv': {'root_dir': '.'}})
-    cli = ApplicationFactory('${namespace}', children_configs=(conf,))
+    cli = ${prog}ApplicationFactory.instance()
     cli.invoke(args)

@@ -1,3 +1,4 @@
+#set ( $prog = $project.substring(0, 1).toUpperCase() + $project.substring(1) )
 """Contains a utility class to create instances.
 
 """
@@ -7,8 +8,8 @@ import logging
 from typing import Any, List
 from dataclasses import dataclass, field
 from pathlib import Path
-from zensols.config import DictionaryConfig
-from zensols.cli import Application, ApplicationFactory
+from zensols.cli import Application, ApplicationFactory, ApplicationResult
+from ${namespace} import ${prog}ApplicationFactory
 
 logger = logging.getLogger(__name__)
 
@@ -28,19 +29,22 @@ class InstanceFactory(object):
     """Whether or not to reload classes."""
 
     @property
-    def cli(self) -> ApplicationFactory:
-        dconf = DictionaryConfig({'appenv': {'root_dir': str(self.root_dir)}})
-        return ApplicationFactory(
-            '${namespace}',
-            children_configs=(dconf,),
+    def factory(self) -> ApplicationFactory:
+        return ${prog}ApplicationFactory.instance(
+            root_dir=self.root_dir,
             reload_factory=self.reload_factory)
+
+    def invoke(self) -> ApplicationResult:
+        factory: ApplicationFactory = self.factory
+        app: Application = factory.create(self.args)
+        return app.invoke()
 
     def instance(self) -> Any:
         args = list(self.args)
         args.extend(['-c', str(self.config_file)])
-        cli: ApplicationFactory = self.cli
+        factory: ApplicationFactory = self.factory
         try:
-            app: Application = cli.create(args)
+            app: Application = factory.create(args)
             res, invokable = app.invoke_but_second_pass()
             return invokable.instance
         except SystemExit as e:
