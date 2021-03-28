@@ -1,6 +1,6 @@
 project:
   name: Zensol Python Project
-  description: Simple Clojure project designed to work with [Zensol Build](https://github.com/plandes/zenbuild).
+  description: Simple Python project designed to work with [Zensol Build](https://github.com/plandes/zenbuild).
   template-directory:
     description: root of source code tree to interpolate
     example: view/template/proj
