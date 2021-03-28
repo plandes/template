@@ -6,6 +6,10 @@ MTARG=		target
 run:
 		./${project}
 
+.PHONY:		deps
+deps:
+		pip install -r src/requirements.txt
+
 .PHONY:		clean
 clean:
 		rm -fr $(MTARG)

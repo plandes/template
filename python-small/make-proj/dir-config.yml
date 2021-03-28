@@ -1,10 +1,6 @@
-#set($namespace-dir = $namespace.replace(".", "/"))
 package:
   generate:
     - file-map:
         source: entry.py
         destination: ${project}
         mode: +x
-    - directory-map:
-        source: ns-dir
-        destination: ${namespace-dir}
