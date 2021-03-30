@@ -32,7 +32,10 @@ def main(**factory_kwargs):
 
 def proto():
     print('-->proto')
-    main(reload_factory=True)
+    try:
+        main(reload_factory=True)
+    except SystemExit as e:
+        print(f'exit: {e}')
 
 
 if (__name__ == '__main__'):
