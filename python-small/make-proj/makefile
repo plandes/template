@@ -1,4 +1,4 @@
-#[[## makefile for the ${project-name} app]]#
+# makefile for the ${project-name} app
 
 MTARG=		target
 
