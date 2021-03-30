@@ -31,13 +31,14 @@ def main(**factory_kwargs):
 
 
 def proto():
-    print('')
+    print('-->proto')
     main(reload_factory=True)
 
 
 if (__name__ == '__main__'):
     # when running from a shell, run the CLI entry point
-    if 'SHLVL' in os.environ:
+    import __main__ as mmod
+    if hasattr(mmod, '__file__'):
         main()
     # otherwise, assume a Python REPL and run the prototyping method
     else:
