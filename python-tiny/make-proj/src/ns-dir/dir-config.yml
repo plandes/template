@@ -1,0 +1,5 @@
+package:
+  generate:
+    - file-map:
+        source: app.py
+        destination: ${appshortname}.py

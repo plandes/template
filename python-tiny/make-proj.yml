@@ -1,0 +1,41 @@
+project:
+  name: Zensol Python Project
+  description: Tiny Python project.
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  context:
+    project-name:
+      description: very short few word project description
+      default: WRITE ME
+      example: A convenience based tool
+    project-description:
+      description: a short project descsripion
+      default: WRITE ME
+      example: This library provides generalized tooling library.
+    project:
+      description: github repo name
+      example: nlparse
+      default: someproj
+    appclass:
+      description: main application class
+      example: NLPParser
+      default: MainApplication
+    appshortname:
+      description: used for main app file name and config section
+      example: parser
+      default: app
+    namespace:
+      description: package namespace
+      example: zensols.nlp
+      default: someprojapp
+    user:
+      description: github user name
+      example: plandes
+    user-email:
+      description: author email
+      example: landes@mailc.net
+    user-name:
+      description: full human name
+      example: Paul Landes
