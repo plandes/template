@@ -12,9 +12,10 @@ from zensols.cli import ApplicationFactory
 @dataclass
 class ${appclass}Factory(ApplicationFactory):
     @classmethod
-    def instance(cls: type, root_dir: Path = Path('.'), **kwargs):
+    def instance(cls: type, root_dir: Path, **kwargs):
         dconf = DictionaryConfig({'appenv': {'root_dir': str(root_dir)}})
         return cls(package_resource='${namespace}.${appshortname}',
+                   app_config_resource=root_dir / 'resources' / 'app.conf',
                    children_configs=(dconf,), **kwargs)
 
 
@@ -26,7 +27,7 @@ def main(**factory_kwargs):
         conf_path = Path(os.environ['${environ}RC'])
     args = sys.argv + ['-c', str(conf_path)]
     sys.path.append(str(src_path))
-    cli = ${appclass}Factory.instance(**factory_kwargs)
+    cli = ${appclass}Factory.instance(entry_path.parent, **factory_kwargs)
     cli.invoke(args[1:])
 
 

@@ -17,8 +17,7 @@ class ${prog}ApplicationFactory(ApplicationFactory):
     def instance(cls: type, root_dir: Path = Path('.'),
                  reload_factory: bool = False,
                  *args, **kwargs) -> ${prog}ApplicationFactory:
-        dconf = DictionaryConfig(
-            {'appenv': {'root_dir': str(root_dir)}})
+        dconf = DictionaryConfig({'appenv': {'root_dir': str(root_dir)}})
         return cls(package_resource='${namespace}',
                    children_configs=(dconf,),
                    reload_factory=reload_factory)
