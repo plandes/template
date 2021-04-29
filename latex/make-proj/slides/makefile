@@ -1,5 +1,11 @@
 #set($pdf-file-name = $description.replace(" ", "_"))
-# latex document creation make file
+## latex document creation make file
+#
+# targets (see zenbuild/src/proj/tex.mk):
+#   debug: shows all errors and warning for when compilation fails
+#   compile: quickly compiles, but doesn't run a second time for references
+#   package: creates a complete viewable PDF
+#   install: like package but creates a distribution set to the desktop
 
 ## project defined (expert use)
 # type of project
