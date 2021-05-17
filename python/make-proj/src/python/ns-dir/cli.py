@@ -5,7 +5,7 @@ from __future__ import annotations
 """
 __author__ = '${user-name}'
 
-from typing import List, Any
+from typing import List, Any, Dict
 from dataclasses import dataclass
 from pathlib import Path
 from zensols.config import DictionaryConfig
