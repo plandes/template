@@ -1,7 +1,7 @@
 """Prototyping REPL fodder.
 
 """
-__author__ = 'Paul Landes'
+__author__ = '${user-name}'
 
 import logging
 from ${namespace} import ${appclass}

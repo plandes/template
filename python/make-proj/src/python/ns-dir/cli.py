@@ -2,7 +2,7 @@
 """Command line entry point to the application.
 
 """
-__author__ = 'plandes'
+__author__ = '${user-name}'
 
 from typing import List, Any
 from . import ${prog}ApplicationFactory

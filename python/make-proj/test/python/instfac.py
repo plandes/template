@@ -2,7 +2,7 @@
 """Contains a utility class to create instances.
 
 """
-__author__ = 'Paul Landes'
+__author__ = '${user-name}'
 
 import logging
 from typing import Any, List

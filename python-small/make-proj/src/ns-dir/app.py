@@ -1,7 +1,7 @@
 """${project-description}
 
 """
-__author__ = '${user}'
+__author__ = '${user-name}'
 
 from dataclasses import dataclass, field
 import logging
