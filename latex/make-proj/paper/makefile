@@ -17,7 +17,7 @@ PROJ_LOCAL_MODULES=	tex-graffle
 
 # per make file vars
 TEX=			paper
-TIPATH +=		$(abspath ../sty) $(abspath ./sty)
+TIPATH +=		$(abspath ../sty)
 BIB_FILE =		$(abspath ../sty/${project}.bib)
 
 #[[## user defined]]#
