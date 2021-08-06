@@ -26,6 +26,10 @@ FINAL_NAME=		${pdf-file-name}_Report
 # Preview.app top x, y, width, height
 PREV_LOC ?=		0 0 1100 1500
 
+# run three times when running from scratch, otherwise reference links are
+# question marks and a manual forced run would otherwise be necessary
+SECOND_RUN_INIT=	1
+
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
 	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
