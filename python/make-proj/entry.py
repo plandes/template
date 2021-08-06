@@ -13,7 +13,7 @@ def main(args: List[str], **factory_kwargs: Dict[str, Any]):
     conf_path = entry_path.parent / 'test-resources' / '${project}.conf'
     if not conf_path.exists():
         conf_path = Path(os.environ['${environ}RC'])
-    args = args + ['-c', str(conf_path)]
+    args = [args] + ['-c', str(conf_path)]
     sys.path.append(str(src_path))
     from ${namespace} import main
     main(args[1:], **factory_kwargs)

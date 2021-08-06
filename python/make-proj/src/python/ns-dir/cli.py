@@ -7,6 +7,7 @@ __author__ = '${user-name}'
 
 from typing import List, Any, Dict
 from dataclasses import dataclass
+import sys
 from pathlib import Path
 from zensols.config import DictionaryConfig
 from zensols.cli import ApplicationFactory
@@ -23,6 +24,6 @@ class ${prog}ApplicationFactory(ApplicationFactory):
                    **kwargs)
 
 
-def main(args: List[str], **kwargs: Dict[str, Any]) -> Any:
+def main(args: List[str] = sys.argv[1:], **kwargs: Dict[str, Any]) -> Any:
     cli = ${prog}ApplicationFactory.instance(**kwargs)
     cli.invoke(args)

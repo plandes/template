@@ -6,7 +6,7 @@
 # type of project
 PROJ_TYPE =		python
 # make modules to add functionality to a build
-PROJ_MODULES =		python-all
+#PROJ_MODULES =		python-all
 #PROJ_MODULES =		git python-doc
 #PROJ_MODULES =		docker release model
 PROJ_MODULES =		git python-resources python-cli python-doc 
