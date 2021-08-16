@@ -44,6 +44,7 @@ class ${appclass}(object):
         self._out_dir = out_dir
         return 0
 
-    def tmp(self):
+    def proto(self):
+        """Prototype test."""
         if logger.isEnabledFor(logging.INFO):
             logger.info('do something more')
