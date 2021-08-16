@@ -21,7 +21,7 @@ project:
     appclass:
       description: main application class
       example: NLPParser
-      default: MainApplication
+      default: App
     appshortname:
       description: used for main app file name and config section
       example: parser
