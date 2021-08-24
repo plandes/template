@@ -22,7 +22,7 @@ def main(args: List[str], **factory_kwargs: Dict[str, Any]):
 def proto():
     print('-->proto')
     try:
-        main('_ proto'.split(), reload_factory=True)
+        main('_ proto'.split(), reload_pattern=r'^${namespace}')
     except SystemExit as e:
         print(f'exit: {e}')
 
