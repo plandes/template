@@ -14,7 +14,7 @@ ADD_CLEAN +=		*.html *.pdf *.tex *.doc *.odt
 
 # make build dependencies
 _ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
-	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
+	  git submodule add git@github.com:plandes/zenbuild.git && make gitinit )
 
 # uncomment to refresh for every default make
 #all:			clean show
