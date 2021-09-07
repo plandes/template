@@ -12,12 +12,12 @@
 PROJ_TYPE=		tex
 # make modules to add functionality to a build; add tex-index for indexes
 PROJ_MODULES=		tex-biber
-#PROJ_LOCAL_MODULES=	tex-table tex-graffle tex-bibstract
+#PROJ_LOCAL_MODULES=	tex-table tex-graffle tex-bibstract tex-export
 PROJ_LOCAL_MODULES=	tex-graffle
 
 # per make file vars
 TEX=			report
-TIPATH +=		$(abspath ../sty)
+TEX_PATH +=		$(abspath ../sty)
 BIB_FILE =		$(abspath ../sty/${project}.bib)
 
 #[[## user defined]]#
