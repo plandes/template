@@ -9,6 +9,14 @@
 \usepackage{zenhref}
 \usepackage{zenmath}
 
+% enable href
+\zzhrefinit%
+% disable, which adds a fake href to avoid breaking links, use for AAAI
+%\zznohrefdisable%
+
+% disable acro italics/hover over for conferences that don't use it like AAAI
+\zzacrodisablelinks\relax
+
 % config
 %\zssingletitledef
 \zssingletitledeffull%

@@ -6,9 +6,14 @@
 \usepackage{zenmath}
 \usepackage{zenreport}
 
+% enable default acronym behavior
+\zzhrefinit%
+% disable hover over links and italics
+%\zzacrodisablelinks%
+
 % academic
-\zrreportinitacademic%
-%\zrreportinitbold%
+\zrreportinitacademic\relax
+%\zrreportinitbold\relax
 
 % report style
 %\zrreportinit%
@@ -38,6 +43,7 @@
 #[[]]#
 #[[The \citeauthor{\deercite} method uses term document matrices~\cite{\deercite}.]]#
 #[[An example implementation is provided with the \lsacode.  The \lsacode\ is freely available.]]#
+#[[Also see \zzhref{https://en.wikipedia.org/wiki/Latent\_semantic\_analysis}.]]#
 #[[]]#
 #[[]]#
 #[[]]#
@@ -102,9 +108,9 @@
 \medskip
 \printbibliography%
 
-%\printacronyms[include-classes=abbrev, name=Abbreviations]%
+\printacronyms[include-classes=abbrev, name=Abbreviations]%
 
-%\printacronyms[include-classes=def, name=Definitions]%
+\printacronyms[include-classes=def, name=Definitions]%
 
 % this needs \makeindex in the preamble (${project}.sty) and tex-index in makefile
 %\printindex%
