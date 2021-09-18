@@ -9,8 +9,8 @@ from pathlib import Path
 
 def main(args: List[str], **factory_kwargs: Dict[str, Any]):
     entry_path = Path(args[0])
-    src_path = entry_path.parent / 'src' / 'python'
-    conf_path = entry_path.parent / 'test-resources' / '${project}.conf'
+    src_path = entry_path.parent / 'src/python'
+    conf_path = entry_path.parent / 'test-resources/${project}.conf'
     if not conf_path.exists():
         conf_path = Path(os.environ['${environ}RC'])
     args = args + ['-c', str(conf_path)]

@@ -23,7 +23,7 @@ class ${appclass}Factory(ApplicationFactory):
 def main(args: List[str], **factory_kwargs: Dict[str, Any]):
     entry_path = Path(args[0])
     src_path = entry_path.parent / 'src'
-    conf_path = entry_path.parent / 'etc' / '${project}.conf'
+    conf_path = entry_path.parent / 'etc/${project}.conf'
     if not conf_path.exists():
         conf_path = Path(os.environ['${environ}RC'])
     args = args + ['-c', str(conf_path)]
