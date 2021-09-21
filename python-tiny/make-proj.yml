@@ -26,10 +26,6 @@ project:
       description: used for main app file name and config section
       example: parser
       default: app
-    namespace:
-      description: package namespace
-      example: zensols.nlp
-      default: someprojapp
     user:
       description: github user name
       example: plandes

@@ -1,6 +1,8 @@
 package:
   generate:
     - file-map:
-        source: entry.py
-        destination: ${project}
+        source: run.py
         mode: +x
+    - directory-map:
+        source: ns-dir
+        destination: ${project}

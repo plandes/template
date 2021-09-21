@@ -4,11 +4,7 @@ MTARG=		target
 
 .PHONY:		run
 run:
-		./${project}
-
-.PHONY:		deps
-deps:
-		pip install -r src/requirements.txt
+		./run.py
 
 .PHONY:		clean
 clean:
