@@ -15,15 +15,11 @@ from zensols.cli import ApplicationFactory
 
 @dataclass
 class ${prog}ApplicationFactory(ApplicationFactory):
-    @classmethod
-    def instance(cls: type, root_dir: Path = Path('.'),
-                 *args, **kwargs) -> ${prog}ApplicationFactory:
-        dconf = DictionaryConfig({'appenv': {'root_dir': str(root_dir)}})
-        return cls(package_resource='${namespace}',
-                   children_configs=(dconf,),
-                   **kwargs)
+    def __init__(self, *args, **kwargs):
+        kwargs['package_resource'] = '${namespace}'
+        super().__init__(*args, **kwargs)
 
 
-def main(args: List[str] = sys.argv[1:], **kwargs: Dict[str, Any]) -> Any:
+def main(args: List[str] = sys.argv[1:], **kwargs: Dict[str, Any]):
     cli = ${prog}ApplicationFactory.instance(**kwargs)
     cli.invoke(args)

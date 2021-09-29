@@ -6,7 +6,6 @@ __author__ = '${user-name}'
 from dataclasses import dataclass, field
 import logging
 from pathlib import Path
-from zensols.config import Configurable
 
 logger = logging.getLogger(__name__)
 
@@ -22,8 +21,6 @@ class ${appclass}(object):
     """${project-description}
 
     """
-    config: Configurable
-
     an_inst: FirstClassObj = field()
     """An instance not given on the commnd line."""
 
@@ -39,7 +36,6 @@ class ${appclass}(object):
         if logger.isEnabledFor(logging.INFO):
             logger.info(f'path: out_dir: {out_dir}, dry_run: {self.dry_run}')
             logger.info(f'instance: {self.an_inst}')
-        self.config.remove_section('some_inst')
         logger.debug('some debug message')
         self._out_dir = out_dir
         return 0
