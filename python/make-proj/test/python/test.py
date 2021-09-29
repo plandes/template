@@ -1,8 +1,10 @@
+#set ( $prog = $project.substring(0, 1).toUpperCase() + $project.substring(1) )
 import logging
 import unittest
 from pathlib import Path
-from ${namespace} import ${appclass}, FirstClassObj
-from instfac import InstanceFactory
+from zensols.cli import CliHarness
+from ${namespace} import ${appclass}, ${prog}ApplicationFactory, FirstClassObj
+
 
 if 0:
     logging.basicConfig(level=logging.DEBUG)
@@ -11,8 +13,11 @@ if 0:
 
 class Test${appclass}(unittest.TestCase):
     def setUp(self):
-        self.app: ${appclass} = InstanceFactory(
-            'doit --level=err'.split(), reload_factory=False).instance()
+        harn = CliHarness(app_factory_class=${prog}ApplicationFactory)
+        self.app: ${appclass} = harn.get_instance(
+            '-c test-resources/${project}.conf --level=err doit')
+        if self.app is None:
+            raise ValueError('Could not create application')
 
     def test_somedata(self):
         app = self.app

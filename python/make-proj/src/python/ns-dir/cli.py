@@ -10,16 +10,24 @@ from dataclasses import dataclass
 import sys
 from pathlib import Path
 from zensols.config import DictionaryConfig
-from zensols.cli import ApplicationFactory
+from zensols.cli import ApplicationFactory, ActionResult, CliHarness
+from . import ${prog}Error
 
 
-@dataclass
 class ${prog}ApplicationFactory(ApplicationFactory):
     def __init__(self, *args, **kwargs):
         kwargs['package_resource'] = '${namespace}'
         super().__init__(*args, **kwargs)
 
+    def _handle_error(self, ex: Exception):
+        try:
+            super()._handle_error(ex)
+        except ${prog}Error as e:
+            self._dump_error(e)
 
-def main(args: List[str] = sys.argv[1:], **kwargs: Dict[str, Any]):
-    cli = ${prog}ApplicationFactory.instance(**kwargs)
-    cli.invoke(args)
+
+def main(args: List[str] = sys.argv, **kwargs: Dict[str, Any]) -> ActionResult:
+    harness = CliHarness(
+        relocate=False,
+        app_factory_class=${prog}ApplicationFactory)
+    return harness.invoke(args, **kwargs)

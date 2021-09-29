@@ -1,3 +1,4 @@
+#set ( $prog = $project.substring(0, 1).toUpperCase() + $project.substring(1) )
 """${project-description}
 
 """
@@ -6,6 +7,7 @@ __author__ = '${user-name}'
 from dataclasses import dataclass, field
 import logging
 from pathlib import Path
+from . import ${prog}Error
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +41,12 @@ class ${appclass}(object):
         logger.debug('some debug message')
         self._out_dir = out_dir
         return 0
+
+    def error(self):
+        """Demonstrate error throwing.
+
+        """
+        raise ${prog}Error('Testing error usage')
 
     def proto(self):
         """Prototype test."""
