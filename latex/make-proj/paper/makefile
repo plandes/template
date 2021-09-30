@@ -26,9 +26,15 @@ FINAL_NAME=		${pdf-file-name}_Paper
 # Preview.app top x, y, width, height
 PREV_LOC ?=		0 0 1100 1500
 
-# run three times when running from scratch, otherwise reference links are
-# question marks and a manual forced run would otherwise be necessary
-SECOND_RUN_INIT=	1
+# number of times to run when creating final (i.e. installed) PDF
+#TEX_FINAL_RUNS = 	2
+
+# clean unused image files not needed in the latex file
+#TEX_EXPORT_DEPS +=	texexportimgclean texexportbibrename
+
+# add include the PDF in the final distribution
+#TEX_EXPORT_ADD_PDF =	1
+
 
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
