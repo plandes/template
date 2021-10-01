@@ -9,5 +9,5 @@ ConfigurationImporterCliHarness(
     app_factory_class='${namespace}.${prog}ApplicationFactory',
     config_path='test-resources/${project}.conf',
     proto_args='-c test-resources/${project}.conf doit',
-    proto_factory_kwargs={'reload_pattern': '^${project}'},
+    proto_factory_kwargs={'reload_pattern': r'^${project}'},
 ).run()
