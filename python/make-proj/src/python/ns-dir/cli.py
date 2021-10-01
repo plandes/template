@@ -8,8 +8,6 @@ __author__ = '${user-name}'
 from typing import List, Any, Dict
 from dataclasses import dataclass
 import sys
-from pathlib import Path
-from zensols.config import DictionaryConfig
 from zensols.cli import ApplicationFactory, ActionResult, CliHarness
 from . import ${prog}Error
 
