@@ -4,10 +4,10 @@
 """
 __author__ = '${user-name}'
 
-from zensols.util import APIError
+from zensols.cli import ApplicationError
 
 
-class ${prog}Error(APIError):
+class ${prog}Error(ApplicationError):
     """Thrown for any application level error.
 
     """

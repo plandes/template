@@ -8,6 +8,6 @@ ConfigurationImporterCliHarness(
     src_dir_name='src/python',
     app_factory_class='${namespace}.${prog}ApplicationFactory',
     config_path='test-resources/${project}.conf',
-    proto_args='-c test-resources/${project}.conf doit',
+    proto_args='doit',
     proto_factory_kwargs={'reload_pattern': r'^${project}'},
 ).run()
