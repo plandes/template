@@ -5,10 +5,8 @@
 __author__ = '${user-name}'
 
 from typing import List, Any, Dict
-from dataclasses import dataclass
 import sys
 from zensols.cli import ApplicationFactory, ActionResult, CliHarness
-from . import ${prog}Error
 
 
 class ${prog}ApplicationFactory(ApplicationFactory):
