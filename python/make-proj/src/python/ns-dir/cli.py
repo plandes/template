@@ -21,4 +21,4 @@ def main(args: List[str] = sys.argv, **kwargs: Dict[str, Any]) -> ActionResult:
     harness = CliHarness(
         relocate=False,
         app_factory_class=${prog}ApplicationFactory)
-    return harness.invoke(args, **kwargs)
+    harness.invoke(args, **kwargs)
