@@ -1,9 +1,8 @@
-#set ( $prog = $project.substring(0, 1).toUpperCase() + $project.substring(1) )
 import logging
 import unittest
 from pathlib import Path
 from zensols.cli import CliHarness
-from ${namespace} import ${appclass}, ${prog}ApplicationFactory, FirstClassObj
+from ${namespace} import ${appclass}, ApplicationFactory, FirstClassObj
 
 
 if 0:
@@ -13,7 +12,7 @@ if 0:
 
 class Test${appclass}(unittest.TestCase):
     def setUp(self):
-        harn = CliHarness(app_factory_class=${prog}ApplicationFactory)
+        harn: CliHarness = ApplicationFactory.create_harness()
         self.app: ${appclass} = harn.get_instance(
             '-c test-resources/${project}.conf --level=err doit')
         if self.app is None:
