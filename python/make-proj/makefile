@@ -47,5 +47,5 @@ appinfo:
 
 .PHONY:			testrun
 testrun:
-			$(eval PY_CLI_ARGS += doit --outdir ${MTARG}/fake-path)
+			$(eval PY_CLI_ARGS=doit $(PY_CLI_ARGS) --outdir ${MTARG}/fake-path)
 			@make PY_CLI_DEBUG=1 PY_CLI_ARGS="$(PY_CLI_ARGS)" pycli
