@@ -15,5 +15,5 @@ class ApplicationFactory(ApplicationFactory):
 
 
 def main(args: List[str] = sys.argv, **kwargs: Dict[str, Any]) -> ActionResult:
-    harness: CliHarness = ApplicationFactory.create_harness()
+    harness: CliHarness = ApplicationFactory.create_harness(relocate=False)
     harness.invoke(args, **kwargs)
