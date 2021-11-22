@@ -5,10 +5,11 @@ __author__ = '${user-name}'
 
 from typing import List, Any, Dict
 import sys
-from zensols.cli import ApplicationFactory, ActionResult, CliHarness
+from zensols.cli import ActionResult, CliHarness
+from zensols.cli import ApplicationFactory as CliApplicationFactory
 
 
-class ApplicationFactory(ApplicationFactory):
+class ApplicationFactory(CliApplicationFactory):
     def __init__(self, *args, **kwargs):
         kwargs['package_resource'] = '${namespace}'
         super().__init__(*args, **kwargs)
