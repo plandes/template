@@ -15,16 +15,17 @@ apps = list: log_cli, app
 [log_cli]
 class_name = zensols.cli.LogConfigurator
 format = %%(asctime)-15s %%(message)s
-log_name = ${project}
+log_name = ${appshortname}
 level = debug
 
 [app]
-class_name = ${project}.${appshortname}.${appclass}
+class_name = ${appshortname}.${appclass}
 """
 
 
-CliHarness(
-    app_config_resource=StringIO(CONFIG),
-    proto_args='',
-    proto_factory_kwargs={'reload_pattern': '^${project}'},
-).run()
+if __name__ == '__main__':
+    CliHarness(
+        app_config_resource=StringIO(CONFIG),
+        proto_args='',
+        proto_factory_kwargs={'reload_pattern': '^${appshortname}'},
+    ).run()

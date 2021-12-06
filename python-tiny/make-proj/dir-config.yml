@@ -3,6 +3,6 @@ package:
     - file-map:
         source: run.py
         mode: +x
-    - directory-map:
-        source: ns-dir
-        destination: ${project}
+    - file-map:
+        source: app.py
+        destination: ${appshortname}.py
