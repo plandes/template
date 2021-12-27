@@ -9,8 +9,13 @@ DOCKER_IMG_NAME=	${image-name}
 DOCKER_USER=		${user}
 #DOCKER_UP_DEPS=		
 
-# make build dependencies
-_ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
-	  git submodule add git@github.com:plandes/zenbuild.git && make gitinit )
+# make build dependencies (remove after initial build)
+_ :=	$(shell [ ! -d .git -a ! -d zenbuild ] && \
+	  git init . && \
+          git submodule add git@github.com:plandes/zenbuild.git && \
+	  git add -A :/ && \
+	  git commit -am 'initial add' && \
+	  git tag -am initial v0.0.1 && \
+          echo "initialized repo" )
 
 include ./zenbuild/main.mk
