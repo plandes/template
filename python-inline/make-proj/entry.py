@@ -8,9 +8,9 @@ __author__ = '${user-name}'
 
 from dataclasses import dataclass
 import logging
-from pathlib import Path
 from io import StringIO
 from zensols.cli import CliHarness
+from zensols.cli import ProgramNameConfigurator
 
 logger = logging.getLogger(__name__)
 CONFIG = """
@@ -19,20 +19,16 @@ root_dir = ${d}{appenv:root_dir}
 
 [cli]
 class_name = zensols.cli.ActionCliManager
-apps = list: add_prog_cli, log_cli, app
-
-[add_prog_cli]
-class_name = zensols.cli.ProgramNameConfigurator
-default = ${d}{appenv:prog}
+apps = list: log_cli, app
 
 [log_cli]
 class_name = zensols.cli.LogConfigurator
-format = ${d}{prog:name}: %%(message)s
-log_name = ${d}{prog:name}
+format = ${d}{program:name}: %%(message)s
+log_name = ${d}{program:name}
 level = debug
 
 [app]
-class_name = ${d}{appenv:prog}.Application
+class_name = ${d}{program:name}.Application
 """
 
 
@@ -52,6 +48,5 @@ class ${appclass}(object):
 if __name__ == '__main__':
     CliHarness(
         app_config_resource=StringIO(CONFIG),
-        app_config_context={'appenv': {'prog': Path(__file__).stem}},
-        proto_args='',
+        app_config_context=ProgramNameConfigurator(None).create_section(),
     ).run()
