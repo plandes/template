@@ -45,8 +45,10 @@ class ${appclass}(object):
             logger.debug('starting prototype')
 
 
-if __name__ == '__main__':
+if (__name__ == '__main__'):
     CliHarness(
         app_config_resource=StringIO(CONFIG),
-        app_config_context=ProgramNameConfigurator(None).create_section(),
+        app_config_context=ProgramNameConfigurator(
+            None, default='${project}').create_section(),
+        proto_args='',
     ).run()
