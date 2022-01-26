@@ -1,0 +1,6 @@
+package:
+  generate:
+    - file-map:
+        source: entry.py
+        destination: ${project}.py
+        mode: +x
