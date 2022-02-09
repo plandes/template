@@ -9,8 +9,7 @@ __author__ = '${user-name}'
 from dataclasses import dataclass
 import logging
 from io import StringIO
-from zensols.cli import CliHarness
-from zensols.cli import ProgramNameConfigurator
+from zensols.cli import CliHarness, ProgramNameConfigurator
 
 logger = logging.getLogger(__name__)
 CONFIG = """
@@ -51,4 +50,5 @@ if (__name__ == '__main__'):
         app_config_context=ProgramNameConfigurator(
             None, default='${project}').create_section(),
         proto_args='',
+        proto_factory_kwargs={'reload_pattern': '^${project}'},
     ).run()
