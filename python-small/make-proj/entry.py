@@ -11,11 +11,12 @@ class ApplicationFactory(CliApplicationFactory):
         super().__init__(*args, **kwargs)
 
 
-harness = ConfigurationImporterCliHarness(
-    src_dir_name='src',
-    app_factory_class=ApplicationFactory,
-    config_path='etc/${project}.conf',
-    proto_args='doit',
-    proto_factory_kwargs={'reload_pattern': r'^${namespace}'},
-)
-harness.run()
+if (__name__ == '__main__'):
+    harness = ConfigurationImporterCliHarness(
+        src_dir_name='src',
+        app_factory_class=ApplicationFactory,
+        config_path='etc/${project}.conf',
+        proto_args='doit',
+        proto_factory_kwargs={'reload_pattern': r'^${namespace}'},
+    )
+    harness.run()
