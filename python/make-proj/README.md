@@ -2,8 +2,6 @@
 # ${project-name}
 
 [![PyPI][pypi-badge]][pypi-link]
-[![Python 3.7][python37-badge]][python37-link]
-[![Python 3.8][python38-badge]][python38-link]
 [![Python 3.9][python39-badge]][python39-link]
 [![Build Status][build-badge]][build-link]
 
@@ -43,10 +41,6 @@ Copyright (c) ${dateYear} ${user-name}
 [pypi]: https://pypi.org/project/${namespace}/
 [pypi-link]: https://pypi.python.org/pypi/${namespace}
 [pypi-badge]: https://img.shields.io/pypi/v/${namespace}.svg
-[python37-badge]: https://img.shields.io/badge/python-3.7-blue.svg
-[python37-link]: https://www.python.org/downloads/release/python-370
-[python38-badge]: https://img.shields.io/badge/python-3.8-blue.svg
-[python38-link]: https://www.python.org/downloads/release/python-380
 [python39-badge]: https://img.shields.io/badge/python-3.9-blue.svg
 [python39-link]: https://www.python.org/downloads/release/python-390
 [build-badge]: https://github.com/${user}/${project}/workflows/CI/badge.svg
