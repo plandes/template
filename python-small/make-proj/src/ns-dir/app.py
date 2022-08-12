@@ -16,13 +16,16 @@ class ${appclass}(object):
     """${project-description}
 
     """
-    config: Configurable
+    CLI_META = {'option_excludes': {'config'}}
+
+    config: Configurable = field()
+    """Creates this instance and provides prototyping."""
 
     dry_run: bool = field(default=False)
     """If given, don't do anything, just act like it."""
 
-    def doit(self, out_dir: Path = None):
-        """Does something interesting.
+    def proto(self, out_dir: Path = None):
+        """Used for prototyping
 
         :param out_dir: the directory to output the data
 
@@ -30,6 +33,7 @@ class ${appclass}(object):
         if logger.isEnabledFor(logging.INFO):
             logger.info(f'path: out_dir: {out_dir}, dry_run: {self.dry_run}')
         self.config.remove_section('some_inst')
-        logger.debug('some debug message')
+        if logger.isEnabledFor(logging.DEBUG):
+            logger.debug('some debug message')
         self._out_dir = out_dir
         return 0

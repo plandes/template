@@ -16,7 +16,7 @@ if (__name__ == '__main__'):
         src_dir_name='src',
         app_factory_class=ApplicationFactory,
         config_path='etc/${project}.conf',
-        proto_args='doit',
+        proto_args='proto',
         proto_factory_kwargs={'reload_pattern': r'^${namespace}'},
     )
     harness.run()
