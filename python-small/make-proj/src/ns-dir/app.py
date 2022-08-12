@@ -6,7 +6,7 @@ __author__ = '${user-name}'
 from dataclasses import dataclass, field
 import logging
 from pathlib import Path
-from zensols.config import Configurable
+from zensols.config import ConfigFactory
 
 logger = logging.getLogger(__name__)
 
@@ -16,16 +16,16 @@ class ${appclass}(object):
     """${project-description}
 
     """
-    CLI_META = {'option_excludes': {'config'}}
+    CLI_META = {'option_excludes': {'config_factory'}}
 
-    config: Configurable = field()
+    config_factory: ConfigFactory = field()
     """Creates this instance and provides prototyping."""
 
     dry_run: bool = field(default=False)
     """If given, don't do anything, just act like it."""
 
     def proto(self, out_dir: Path = None):
-        """Used for prototyping
+        """Used for prototyping.
 
         :param out_dir: the directory to output the data
 
