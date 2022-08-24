@@ -3,6 +3,7 @@
 
 [![PyPI][pypi-badge]][pypi-link]
 [![Python 3.9][python39-badge]][python39-link]
+[![Python 3.10][python310-badge]][python310-link]
 [![Build Status][build-badge]][build-link]
 
 ${project-description}
@@ -43,5 +44,7 @@ Copyright (c) ${dateYear} ${user-name}
 [pypi-badge]: https://img.shields.io/pypi/v/${namespace}.svg
 [python39-badge]: https://img.shields.io/badge/python-3.9-blue.svg
 [python39-link]: https://www.python.org/downloads/release/python-390
+[python310-badge]: https://img.shields.io/badge/python-3.10-blue.svg
+[python310-link]: https://www.python.org/downloads/release/python-310
 [build-badge]: https://github.com/${user}/${project}/workflows/CI/badge.svg
 [build-link]: https://github.com/${user}/${project}/actions
