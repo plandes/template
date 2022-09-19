@@ -32,7 +32,6 @@ class ${appclass}(object):
         """
         if logger.isEnabledFor(logging.INFO):
             logger.info(f'path: out_dir: {out_dir}, dry_run: {self.dry_run}')
-        self.config.remove_section('some_inst')
         if logger.isEnabledFor(logging.DEBUG):
             logger.debug('some debug message')
         self._out_dir = out_dir
