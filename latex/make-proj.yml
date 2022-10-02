@@ -40,7 +40,7 @@ project:
       example: landes@mailc.net
     organization-name:
       description: organization name
-      example: University of Illinois at Chicago
+      example: University of Illinois Chicago
     organization-short-name:
       description: short version of the organization name
       example: UIC
