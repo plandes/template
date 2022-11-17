@@ -23,7 +23,7 @@ class_name = ${appshortname}.${appclass}
 """
 
 
-if __name__ == '__main__':
+if (__name__ == '__main__'):
     CliHarness(
         app_config_resource=StringIO(CONFIG),
         proto_args='',
