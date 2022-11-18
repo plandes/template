@@ -9,7 +9,6 @@ CONFIG = """
 root_dir = ${d}{appenv:root_dir}
 
 [cli]
-class_name = zensols.cli.ActionCliManager
 apps = list: log_cli, app
 
 [log_cli]
