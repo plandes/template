@@ -19,6 +19,6 @@ CPROG=		${project}
 
 # make build dependencies
 _ :=	$(shell [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
-	  git submodule add git@github.com:plandes/zenbuild.git && make gitinit )
+	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
 
 include ./zenbuild/main.mk

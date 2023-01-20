@@ -12,7 +12,7 @@ DOCKER_USER=		${user}
 # make build dependencies (remove after initial build)
 _ :=	$(shell [ ! -d .git -a ! -d zenbuild ] && \
 	  git init . && \
-          git submodule add git@github.com:plandes/zenbuild.git && \
+          git submodule add https://github.com/plandes/zenbuild && \
 	  git add -A :/ && \
 	  git commit -am 'initial add' && \
 	  git tag -am initial v0.0.1 && \

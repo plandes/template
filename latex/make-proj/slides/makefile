@@ -41,6 +41,6 @@ PREV_LOC ?=		0 0 1100 1500
 
 # make build dependencies
 _ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
-	  git submodule add git@github.com:plandes/zenbuild.git && make gitinit )
+	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
 
 include ../zenbuild/main.mk
