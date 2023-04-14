@@ -3,30 +3,29 @@
 % In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
 \documentclass[11pt]{article}
 
+%% instructions:
+% 1. replace old ACL template acl<year>.sty -> ./sty/acl.sty
+% 2. copy acl_natbib.bib to ./sty
+% 3. confirm preamble ../zenbuild/src/sty/zenacl.sty with template acl<year>.tex
+
+
 %% un-comment the next line to get the non-anonymized version
 %\newif\ifisfinal\isfinaltrue
 
 \usepackage{amsmath}
-\usepackage[nohyperref]{acl2018}
-\bibliographystyle{acl}
+\usepackage{zenacl}
 \usepackage{${project}}
 \usepackage{zenlist}
 \usepackage{zentable}
 \usepackage{zenhref}
 \usepackage{zenmath}
 
-% enable href
-\zzhrefinit%
-% disable, which adds a fake href to avoid breaking links, use for AAAI
-%\zzhrefdisable%
+% initialize the ACL template
+\zzaclinit%
 
-% disable acro italics/hover over for conferences that don't use it like AAAI
-\zzacrodisablelinks\relax
-
-% config
-%\zssingletitledef
+% title
+%\zssingletitledef%
 \zssingletitledeffull%
-\aclfinalcopy%
 
 \begin{document}
 \maketitle
@@ -67,7 +66,7 @@
 #[[]]#
 #[[\item Perform SVD.  This is a special kind of eigendecomposition on $X$ by]]#
 #[[  separating such that:]]#
-#[[\[X = U \, \Sigma V\zztrans\]]]#
+#[[\[X = U \, \Sigma V\zmtrans\]]]#
 #[[  where $X$ is our term frequency matrix, $U$ and $V$ are the singular vectors,]]#
 #[[  which are a set of orthogonal eigenvectors.]]#
 #[[  $\Sigma$ is a diagonal matrix composed of the eigenvalues of $U$ and $V$.]]#
@@ -81,7 +80,7 @@
 #[[\item First, $k$ is set as the number of clusters a priori and represents the]]#
 #[[  number of authors we choose to cluster together.  Then create a new latent]]#
 #[[  word embedding vector set with:]]#
-#[[  \[\hat{X}_k = \sum_{i=1}^{k} U_{ik} \Sigma_{ii} V_{ki}\zztrans\]]]#
+#[[  \[\hat{X}_k = \sum_{i=1}^{k} U_{ik} \Sigma_{ii} V_{ki}\zmtrans\]]]#
 #[[  using only the first $k$ rows/columns to {\it truncate} the original SVD]]#
 #[[  matrix.]]#
 #[[]]#
@@ -101,6 +100,6 @@
 \clearpage
 \pagebreak
 %\medskip
-\bibliography{${project}}%
+\zzaclend{${project}}%
 
 \end{document}

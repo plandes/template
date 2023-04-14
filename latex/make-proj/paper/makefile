@@ -1,13 +1,10 @@
 #set($pdf-file-name = $description.replace(" ", "_"))
-#[[## latex document creation make file]]#
+#set($double-hash = '##')
+${double-hash} (@)Id: ${project} paper build
 #
-#[[## targets (see zenbuild/src/proj/tex.mk):]]#
-#   debug: shows all errors and warning for when compilation fails
-#   compile: quickly compiles, but doesn't run a second time for references
-#   package: creates a complete viewable PDF
-#   install: like package but creates a distribution set to the desktop
 
-#[[## project defined (expert use)]]#
+#[[## Project definitions]]#
+#
 # type of project
 PROJ_TYPE=		tex
 # make modules to add functionality to a build; add tex-index for indexes
@@ -20,7 +17,8 @@ TEX=			paper
 TEX_PATH +=		$(abspath ../sty)
 BIB_FILE =		$(abspath ../sty/${project}.bib)
 
-#[[## user defined]]#
+
+#[[## User defined]]#
 # distribution file name
 FINAL_NAME=		${pdf-file-name}_Paper
 # Preview.app top x, y, width, height
