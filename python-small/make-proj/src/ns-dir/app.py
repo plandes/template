@@ -16,8 +16,6 @@ class ${appclass}(object):
     """${project-description}
 
     """
-    CLI_META = {'option_excludes': {'config_factory'}}
-
     config_factory: ConfigFactory = field()
     """Creates this instance and provides prototyping."""
 
