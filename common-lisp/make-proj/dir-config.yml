@@ -1,0 +1,9 @@
+package:
+  generate:
+    - file-map:
+        source: entry.ros
+        destination: ${project-name}.ros
+        mode: +x
+    - file-map:
+        source: project.asd
+        destination: ${project}.asd

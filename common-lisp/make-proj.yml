@@ -1,0 +1,29 @@
+project:
+  name: Zensol Common Lisp Project
+  description: Very Common Lisp project.
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  context:
+    project-description:
+      description: a short project descsripion
+      example: Lazy read JSONL files with each line a separate definition.
+      default: WRITE ME
+    project:
+      description: project and GitHub repo name
+      example: cl-jsonl
+      default: cl-someproj
+    project-name:
+      description: the name of the main source file
+      example: jsonl
+      default: someproj
+    user:
+      description: github user name
+      example: plandes
+    user-email:
+      description: author email
+      example: landes@mailc.net
+    user-name:
+      description: full human name
+      example: Paul Landes
