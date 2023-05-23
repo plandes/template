@@ -1,5 +1,5 @@
 #set($dateYear= $dateTool.get('yyyy'))
-# ${project-name}
+# ${project-description}
 
 [![Build Status][build-badge]][build-link]
 

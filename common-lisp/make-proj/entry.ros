@@ -25,5 +25,5 @@ exec ros -Q -- $0 "$@"
     ((and (> (length argv) 0) (equal (first argv) "run"))
      (apply '${project}:main (cdr argv)))
     ;; print help
-    (t (let ((u "usage ${project-name}.ros <-h|--help|test|run [options]> ~%"))
+    (t (let ((u "usage: ${project-name}.ros <-h|--help|test|run [options]> ~%"))
 	 (format t u)))))
