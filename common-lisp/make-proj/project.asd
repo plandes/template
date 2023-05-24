@@ -17,8 +17,8 @@
   :depends-on ("arrows"
 	       "fiveam"
 	       "${project}")
-  :pathname #P"tests/"
-  :components ((:file "tests"))
+  :pathname #P"test/"
+  :components ((:file "test"))
   :perform (test-op (op c)
                     (symbol-call :fiveam :run!
-                                 (find-symbol* :${project} :${project}/tests))))
+                                 (find-symbol* :${project} :${project}/test))))

@@ -1,12 +1,12 @@
-(defpackage #:${project}/tests
+(defpackage #:${project}/test
   (:use #:cl
 	#:arrows
 	#:fiveam
 	#:${project}))
-(in-package :${project}/tests)
+(in-package :${project}/test)
 
 (defvar test-resource-path
-  (asdf:system-relative-pathname :${project} #p"tests/test-resource.txt"))
+  (asdf:system-relative-pathname :${project} #p"test/test-resource.txt"))
 
 (def-suite ${project})
 (in-suite ${project})

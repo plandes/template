@@ -18,7 +18,7 @@ INFO_TARGETS +=		appinfo
 CL_RUN_ARGS +=		run
 
 # entry application
-CL_PROTO_APP = 		${project-name}.ros
+CL_PROTO_APP = 		./${project-name}.ros
 
 # edit these if you want
 #GITUSER =		johndoe
