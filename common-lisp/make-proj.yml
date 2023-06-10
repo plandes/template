@@ -18,6 +18,10 @@ project:
       description: the name of the main source file
       example: jsonl
       default: someproj
+    initial-package:
+      description: the name of the main source file
+      example: jsonl
+      default: package
     user:
       description: github user name
       example: plandes

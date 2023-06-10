@@ -1,5 +1,5 @@
 package:
   generate:
     - file-map:
-        source: main.lisp
-        destination: ${project-name}.lisp
+        source: package.lisp
+        destination: ${initial-package}.lisp
