@@ -1,0 +1,28 @@
+project:
+  name: Zensol GitHub Markdown Documentation Project
+  description: 'Documentation to be deployed to https://<user>/github.io/<project>'
+  template-directory:
+    description: root of source code tree to interpolate
+    example: view/template/proj
+    default: make-proj
+  context:
+    project-title:
+      description: very short few word project description
+      default: The title
+      example: Hardware report
+    project-description:
+      description: the documentation text to start with
+      example: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    project:
+      description: name of the project, directory and repo name
+      example: nlparse
+      default: someproj
+    user:
+      description: github user name
+      example: plandes
+    user-email:
+      description: author email
+      example: landes@mailc.net
+    user-name:
+      description: full human name
+      example: Paul Landes
