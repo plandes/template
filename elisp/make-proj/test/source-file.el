@@ -10,9 +10,9 @@
 (require '${project-name})
 
 (ert-deftest test-load ()
-  "Test successful evaluation of ${project-name}"
+  "Test successful evaluation of ${project-name}."
   (should nil))
 
 (provide '${project-name}-test)
 
-;;; ${project-name}-test ends here
+;;; ${project-name}-test.el ends here

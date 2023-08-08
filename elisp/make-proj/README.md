@@ -8,6 +8,11 @@
 WRITE ME
 
 
+#[[## Changelog]]#
+
+An extensive changelog is available [here](CHANGELOG.md).
+
+
 #[[## License]]#
 
 Copyright (c) ${dateYear} ${project-author}
