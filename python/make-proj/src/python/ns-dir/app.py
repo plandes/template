@@ -48,6 +48,13 @@ class ${appclass}(object):
         """
         raise ${prog}Error('Testing error usage')
 
+
+@dataclass
+class PrototypeApplication(object):
+    CLI_META = {'is_usage_visible': False}
+
+    app: Application = field()
+
     def proto(self):
         """Prototype test."""
         if logger.isEnabledFor(logging.INFO):
