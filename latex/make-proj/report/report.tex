@@ -74,7 +74,7 @@
 #[[]]#
 #[[\item Perform SVD.  This is a special kind of eigendecomposition on $X$ by]]#
 #[[  separating such that:]]#
-#[[\[X = U \, \Sigma V\zztrans\]]]#
+#[[\[X = U \, \Sigma V\zmtrans\]]]#
 #[[  where $X$ is our term frequency matrix, $U$ and $V$ are the singular vectors,]]#
 #[[  which are a set of orthogonal eigenvectors.]]#
 #[[  $\Sigma$ is a diagonal matrix composed of the eigenvalues of $U$ and $V$.]]#
@@ -88,7 +88,7 @@
 #[[\item First, $k$ is set as the number of clusters a priori and represents the]]#
 #[[  number of authors we choose to cluster together.  Then create a new latent]]#
 #[[  word embedding vector set with:]]#
-#[[  \[\hat{X}_k = \sum_{i=1}^{k} U_{ik} \Sigma_{ii} V_{ki}\zztrans\]]]#
+#[[  \[\hat{X}_k = \sum_{i=1}^{k} U_{ik} \Sigma_{ii} V_{ki}\zmtrans\]]]#
 #[[  using only the first $k$ rows/columns to {\it truncate} the original SVD]]#
 #[[  matrix.]]#
 #[[]]#
