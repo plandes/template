@@ -1,18 +1,24 @@
+%% Slides environment configuration
+%
 \ifdefined\ispresentation%
   \documentclass[11pt,pdf]{beamer}
 \else
   \documentclass[11pt,pdf,handout]{beamer}
 \fi
 
-% configure logo size
-\newcommand{\zsaddlogosize}{0.5cm}
 % don't load certain libraries beamer can't handle
 \def\zenslidesmode{1}
 
+
+%% Imports
+%
 % import
 \usepackage{${project}}
 \usepackage{zenslides}
 
+
+%% Front matter
+%
 % single author name, organization, department, address, email
 \zssingletitledeffull%
 % single author name, email
@@ -29,10 +35,15 @@
 %\cs_set_eq:NN \acro_alt:n \acro_long:n
 %\ExplSyntaxOff
 
+
+%% Configure
+%
+% configure logo size
+\renewcommand{\zsaddlogosize}{0.5cm}
 % add logo
-\zsaddlogo
+\zsaddlogo%
 % theme configuration
-\zsmetropolistheme
+\zsmetropolistheme%
 % inline style of bibliography
 \zzaddbiblatexstyle{${project}.bib}
 
@@ -42,6 +53,9 @@
 #[[\end{frame}]]#
 #[[}]]#
 #[[]]#
+#[[]]#
+#[[%% Doc]]#
+#[[%]]#
 #[[\begin{document}]]#
 #[[\begin{frame}]]#
 #[[  \titlepage]]#
