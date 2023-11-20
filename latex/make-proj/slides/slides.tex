@@ -9,6 +9,13 @@
 % don't load certain libraries beamer can't handle
 \def\zenslidesmode{1}
 
+% always use long acronyms
+%\ExplSyntaxOn
+%\cs_set_eq:NN \acro_use:n \acro_long:n
+%\cs_set_eq:NN \acro_short:n \acro_long:n
+%\cs_set_eq:NN \acro_alt:n \acro_long:n
+%\ExplSyntaxOff
+
 
 %% Imports
 %
@@ -27,13 +34,6 @@
 %\zstwotitledef{John Doe}{jdoe@example.com}
 % dual author name, email, organization
 %\zstwotitleinstdef{John Doe}{jdoe@example.com}{Institution}{Department}{1234 Address St. Chicago IL.}
-
-% always use long acronyms
-%\ExplSyntaxOn
-%\cs_set_eq:NN \acro_use:n \acro_long:n
-%\cs_set_eq:NN \acro_short:n \acro_long:n
-%\cs_set_eq:NN \acro_alt:n \acro_long:n
-%\ExplSyntaxOff
 
 
 %% Configure
