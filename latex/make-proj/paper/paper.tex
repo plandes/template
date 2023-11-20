@@ -3,14 +3,11 @@
 % In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
 \documentclass[11pt]{article}
 
-%% instructions:
+%% To update to the latest conference style:
+%
 % 1. replace old ACL template acl<year>.sty -> ./sty/acl.sty
 % 2. copy acl_natbib.bib to ./sty
 % 3. confirm preamble ../zenbuild/src/sty/zenacl.sty with template acl<year>.tex
-
-
-%% un-comment the next line to get the non-anonymized version
-%\newif\ifisfinal\isfinaltrue
 
 \usepackage{amsmath}
 \usepackage{zenacl}
@@ -20,13 +17,18 @@
 \usepackage{zenhref}
 \usepackage{zenmath}
 
+%% Paper configuration
+%
 % initialize the ACL template
 \zzaclinit%
 
-% title
+% front matter
 %\zssingletitledef%
 \zssingletitledeffull%
 
+
+%% Doc
+%
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -101,5 +103,6 @@
 \pagebreak
 %\medskip
 \zzaclend{${project}}%
+\bibliographystyle{acl_natbib}
 
 \end{document}

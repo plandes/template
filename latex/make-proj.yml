@@ -38,6 +38,9 @@ project:
     author-email:
       description: author email
       example: landes@mailc.net
+    author-user:
+      description: github user name
+      example: plandes
     organization-name:
       description: organization name
       example: University of Illinois Chicago

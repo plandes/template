@@ -1,41 +1,32 @@
-#set($pdf-file-name = $description.replace(" ", "_"))
+#set($dateYear= $dateTool.get('yyyy/dd/MM'))
+#set($pdf-file-name = $description.replace(" ", ""))
 #set($double-hash = '##')
-${double-hash} (@)Id: ${project} paper build
-#
+${double-hash} @meta: {desc: 'Academic LaTeX paper makefile', date: '${dateYear}'}
 
-#[[## Project definitions]]#
-#
-# type of project
-PROJ_TYPE=		tex
-# make modules to add functionality to a build; add tex-index for indexes
-PROJ_MODULES=		tex-bib
-#PROJ_LOCAL_MODULES=	tex-table tex-graffle tex-bibstract tex-export
-PROJ_LOCAL_MODULES=	tex-graffle
 
-# per make file vars
-TEX=			paper
-TEX_PATH +=		$(abspath ../sty)
-BIB_FILE =		$(abspath ../sty/${project}.bib)
+#[[## Build configuration]]#
+#
+# make modules to add functionality to a build
+PROJ_MODULES =		tex-bib
+
+# make modules to include before the build is configured
+PROJ_LOCAL_MODULES =	tex-graffle
+
+# the latex source file stem
+TEX =			paper
+
+# override/add to default paths
+#TEX_PATH +=
+#BIB_FILE =
 
 
 #[[## User defined]]#
+#
 # distribution file name
-FINAL_NAME=		${pdf-file-name}_Paper
-# Preview.app top x, y, width, height
-PREV_LOC ?=		0 0 1100 1500
-
-# number of times to run when creating final (i.e. installed) PDF
-#TEX_FINAL_RUNS = 	2
-
-# clean unused image files not needed in the latex file
-#TEX_EXPORT_DEPS +=	texexportimgclean texexportbibrename
-
-# add include the PDF in the final distribution
-#TEX_EXPORT_ADD_PDF =	1
+#FINAL_NAME =		${pdf-file-name}Paper
 
 
-# make build dependencies
-_ :=	$(shell cd .. && [ ! -d .git ] && git init ; [ ! -d zenbuild ] && \
-	  git submodule add https://github.com/plandes/zenbuild && make gitinit )
-
+#[[## Includes]]#
+#
+include ../config/${project}.mk
 include ../zenbuild/main.mk

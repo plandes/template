@@ -1,10 +1,20 @@
 \documentclass[12pt]{article}
 
+%% Imports
+%
 \usepackage{${project}}
 %\usepackage[usesidenotes]{${project}}
 \usepackage{fullpage}
 \usepackage{zenmath}
 \usepackage{zenreport}
+
+
+%% Configure
+%
+% document type (below title)
+\renewcommand{\doctype}{Report}
+% remove date
+\date{}
 
 % enable default hyperlink behavior
 \zzhrefinit%
@@ -14,13 +24,11 @@
 % disable acronym links, hover over features, and italics
 %\zzacrodisablelinks%
 
-% academic
-\zrreportinitacademic%
-%\zrreportinit%
-
-% report style
-%\zrrpage%
-%\zrrfontset%
+% configure the report document class
+\zrreportinit%
+%\zrreportinitacademic%
+\zrrpage%
+\zrrfontset%
 
 % options: alphabetic, authoryear (default), numeric-comp, alphabetic-verb, alphabetic-comp
 % https://www.overleaf.com/learn/latex/Biblatex_citation_styles
@@ -29,6 +37,9 @@
 % cite commands
 % \zzaddcommands%
 
+
+%% Doc
+%
 \begin{document}
 \zrreptitle%
 %\tableofcontents
