@@ -5,7 +5,9 @@
 \DeclareBoolOption{usesidenotes}
 \ProcessKeyvalOptions*
 
-% ------ doc variables
+%% Name: organizations, authors, locations
+%
+% doc variables
 \newcommand{\theauthor}{${author-name}}
 \newcommand{\theauthoremail}{${author-email}}
 \newcommand{\theorganization}{${organization-name}}
@@ -19,14 +21,10 @@
 \newcommand{\doclongtitle}{${description-long}}
 \newcommand{\doctype}{${document-type}}
 \newcommand{\zzdrightfooter}{\theorganization}
-% ------
 
-%% fonts
-%% http://www.icl.utk.edu/~mgates3/docs/latex-fonts.pdf
-%\usepackage{bookman}
-%\usepackage{charter}
-%\usepackage{fourier}
 
+%% Imports
+%
 \usepackage{zensec}
 \if${project}@usesidenotes
   \usepackage[usesidenotes]{zenacro}
@@ -38,11 +36,22 @@
 % needed for unicode characters in bibliography if there are any
 \usepackage[utf8]{inputenc}
 
-% corpora
+
+%% Font options
+%
+%% http://www.icl.utk.edu/~mgates3/docs/latex-fonts.pdf
+%\usepackage{bookman}
+%\usepackage{charter}
+%\usepackage{fourier}
+
+
+%% Citations
+%
 \newcommand{\deercite}{deerwesterIndexingLatentSemantic1990}
 
 
-%% terms
+%% Terms
+%
 % NLP specific
 \zzdefnamedacro{nlp}{NLP}{natural language processing}
 \zzdefnamedacro{lsa}{LSA}{latent semantic analysis}
@@ -53,16 +62,12 @@
 \zzdefacroterm{annotations}
 \zzdefacro{anncorp}{annotated corpus}
 
-%% refs
+%% URLs
 \zzdefurlacro{lsacode}{LSA classification repo}{https://github.com/chrisjmccormick/LSA\_Classification}
 
 
-%% options
-% uncomment to add an index
-%\makeindex
-
-
-%% commands (used only as an example--can torch this)
+%% Commands
+%
 \providecommand{\svd}[3]{
 \begin{figure*}[h!]
 \begin{center}
