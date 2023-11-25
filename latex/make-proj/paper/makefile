@@ -1,4 +1,4 @@
-#set($dateYear= $dateTool.get('yyyy/dd/MM'))
+#set($dateYear= $dateTool.get('yyyy-dd-MM'))
 #set($pdf-file-name = $description.replace(" ", ""))
 #set($double-hash = '##')
 ${double-hash} @meta: {desc: 'Academic LaTeX paper makefile', date: '${dateYear}'}
