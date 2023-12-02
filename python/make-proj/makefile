@@ -1,8 +1,9 @@
 #[[## makefile automates the build and deployment for python projects]]#
 
 
-#[[## build config]]#
-
+#[[## Build system]]#
+#
+#
 # type of project
 PROJ_TYPE =		python
 # make modules to add functionality to a build
@@ -15,8 +16,8 @@ INFO_TARGETS +=		appinfo
 #ADD_CLEAN +=
 
 
-#[[## project specific]]#
-
+#[[## Project]]#
+#
 # add app configuration to command line arguments
 PY_CLI_ARGS +=		-c test-resources/${project}.conf
 
@@ -36,10 +37,13 @@ _ :=	$(shell [ ! -d .git -a ! -d zenbuild ] && \
           echo "initialized repo" )
 
 
-## targets
-
+#[[## Includes]]#
+#
 include ./zenbuild/main.mk
 
+
+#[[## Targets]]#
+#
 .PHONY:			appinfo
 appinfo:
 			@echo "app-resources-dir: $(RESOURCES_DIR)"
