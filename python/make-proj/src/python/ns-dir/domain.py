@@ -11,3 +11,4 @@ class ${prog}Error(ApplicationError):
     """Thrown for any application level error.
 
     """
+    pass
