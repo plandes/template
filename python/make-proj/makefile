@@ -1,4 +1,5 @@
-#[[## makefile automates the build and deployment for python projects]]#
+#set($date= $dateTool.get('yyyy-MM-dd'))
+#[[##@meta {desc: 'build and deployment for python projects']]#, date: '${date}'}
 
 
 #[[## Build system]]#
