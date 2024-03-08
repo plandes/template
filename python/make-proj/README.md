@@ -18,12 +18,10 @@ available.
 
 #[[## Obtaining]]#
 
-The easiest way to install the command line program is via the `pip` installer:
+The library can be installed with pip from the [pypi] repository:
 ```bash
 pip3 install ${namespace}
 ```
-
-Binaries are also available on [pypi].
 
 
 #[[## Changelog]]#
