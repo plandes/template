@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.9', '3.10']
+        python-version: ['3.10', '3.11']
     steps:
       - name: Checkout reposistory
         uses: actions/checkout@v3
@@ -28,6 +28,9 @@ jobs:
 
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+
+      - name: Build requirements
+        run: 'pip install plac zensols.pybuild'
 
       - name: Prepare tests
         run: 'make info deps'
