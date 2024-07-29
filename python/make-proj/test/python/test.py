@@ -1,6 +1,7 @@
 import logging
 import unittest
 from pathlib import Path
+from zensols.util import Failure
 from zensols.cli import CliHarness
 from ${namespace} import ${appclass}, ApplicationFactory, FirstClassObj
 
@@ -15,8 +16,8 @@ class Test${appclass}(unittest.TestCase):
         harn: CliHarness = ApplicationFactory.create_harness()
         self.app: ${appclass} = harn.get_instance(
             '-c test-resources/${project}.conf --level=err doit')
-        if self.app is None:
-            raise ValueError('Could not create application')
+        if isinstance(self.app, Failure):
+            self.app.rethrow()
 
     def test_somedata(self):
         app = self.app

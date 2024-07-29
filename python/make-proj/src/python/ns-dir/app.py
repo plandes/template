@@ -13,19 +13,10 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class FirstClassObj(object):
-    path: Path = field()
-    """The path to some resource."""
-
-
-@dataclass
 class ${appclass}(object):
     """${project-description}
 
     """
-    an_inst: FirstClassObj = field()
-    """An instance not given on the commnd line."""
-
     dry_run: bool = field(default=False)
     """If given, don't do anything, just act like it."""
 
@@ -37,7 +28,6 @@ class ${appclass}(object):
         """
         if logger.isEnabledFor(logging.INFO):
             logger.info(f'path: out_dir: {out_dir}, dry_run: {self.dry_run}')
-            logger.info(f'instance: {self.an_inst}')
         logger.debug('some debug message')
         self._out_dir = out_dir
         return 0
